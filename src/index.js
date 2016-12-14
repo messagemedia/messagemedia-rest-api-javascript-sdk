@@ -23,12 +23,12 @@
 (function(factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/DeliveryReport', 'model/DeliveryReportId', 'model/DeliveryReports', 'model/InlineResponse400', 'model/MessageFormat', 'model/MessageStatus', 'model/MessageStatusCode', 'model/Messages', 'model/NewMessage', 'model/Pagination', 'model/ReceivedMessage', 'model/ReceivedMessages', 'model/Replies', 'model/Reply', 'model/ReplyId', 'model/ReplyVendorAccountId', 'model/Report', 'model/ReportingDetailProperties', 'model/ReportingDetailPropertiesFilters', 'model/ReportingDetailPropertiesSorting', 'model/Reports', 'model/SentMessage', 'model/SentMessages', 'model/Status', 'model/SubmittedMessage', 'model/SubmittedMessages', 'model/SummaryReport', 'model/SummaryReportData', 'model/SummaryReportProperties', 'api/DeliveryReportsApi', 'api/MessagingApi', 'api/MessagingReportsApi', 'api/RepliesApi'], factory);
+    define(['ApiClient', 'model/DeliveryReport', 'model/DeliveryReportId', 'model/DeliveryReports', 'model/InlineResponse400', 'model/MessageStatusCode', 'model/Messages', 'model/NewMessage', 'model/Pagination', 'model/ReceivedMessage', 'model/ReceivedMessages', 'model/Replies', 'model/Reply', 'model/ReplyId', 'model/ReplyVendorAccountId', 'model/Report', 'model/ReportingDetailProperties', 'model/ReportingDetailPropertiesFilters', 'model/ReportingDetailPropertiesSorting', 'model/Reports', 'model/SentMessage', 'model/SentMessages', 'model/Status', 'model/SubmittedMessage', 'model/SubmittedMessages', 'model/SummaryReport', 'model/SummaryReportData', 'model/SummaryReportProperties', 'api/DeliveryReportsApi', 'api/MessagingApi', 'api/MessagingReportsApi', 'api/RepliesApi'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('./ApiClient'), require('./model/DeliveryReport'), require('./model/DeliveryReportId'), require('./model/DeliveryReports'), require('./model/InlineResponse400'), require('./model/MessageFormat'), require('./model/MessageStatus'), require('./model/MessageStatusCode'), require('./model/Messages'), require('./model/NewMessage'), require('./model/Pagination'), require('./model/ReceivedMessage'), require('./model/ReceivedMessages'), require('./model/Replies'), require('./model/Reply'), require('./model/ReplyId'), require('./model/ReplyVendorAccountId'), require('./model/Report'), require('./model/ReportingDetailProperties'), require('./model/ReportingDetailPropertiesFilters'), require('./model/ReportingDetailPropertiesSorting'), require('./model/Reports'), require('./model/SentMessage'), require('./model/SentMessages'), require('./model/Status'), require('./model/SubmittedMessage'), require('./model/SubmittedMessages'), require('./model/SummaryReport'), require('./model/SummaryReportData'), require('./model/SummaryReportProperties'), require('./api/DeliveryReportsApi'), require('./api/MessagingApi'), require('./api/MessagingReportsApi'), require('./api/RepliesApi'));
+    module.exports = factory(require('./ApiClient'), require('./model/DeliveryReport'), require('./model/DeliveryReportId'), require('./model/DeliveryReports'), require('./model/InlineResponse400'), require('./model/MessageStatusCode'), require('./model/Messages'), require('./model/NewMessage'), require('./model/Pagination'), require('./model/ReceivedMessage'), require('./model/ReceivedMessages'), require('./model/Replies'), require('./model/Reply'), require('./model/ReplyId'), require('./model/ReplyVendorAccountId'), require('./model/Report'), require('./model/ReportingDetailProperties'), require('./model/ReportingDetailPropertiesFilters'), require('./model/ReportingDetailPropertiesSorting'), require('./model/Reports'), require('./model/SentMessage'), require('./model/SentMessages'), require('./model/Status'), require('./model/SubmittedMessage'), require('./model/SubmittedMessages'), require('./model/SummaryReport'), require('./model/SummaryReportData'), require('./model/SummaryReportProperties'), require('./api/DeliveryReportsApi'), require('./api/MessagingApi'), require('./api/MessagingReportsApi'), require('./api/RepliesApi'));
   }
-}(function(ApiClient, DeliveryReport, DeliveryReportId, DeliveryReports, InlineResponse400, MessageFormat, MessageStatus, MessageStatusCode, Messages, NewMessage, Pagination, ReceivedMessage, ReceivedMessages, Replies, Reply, ReplyId, ReplyVendorAccountId, Report, ReportingDetailProperties, ReportingDetailPropertiesFilters, ReportingDetailPropertiesSorting, Reports, SentMessage, SentMessages, Status, SubmittedMessage, SubmittedMessages, SummaryReport, SummaryReportData, SummaryReportProperties, DeliveryReportsApi, MessagingApi, MessagingReportsApi, RepliesApi) {
+}(function(ApiClient, DeliveryReport, DeliveryReportId, DeliveryReports, InlineResponse400, MessageStatusCode, Messages, NewMessage, Pagination, ReceivedMessage, ReceivedMessages, Replies, Reply, ReplyId, ReplyVendorAccountId, Report, ReportingDetailProperties, ReportingDetailPropertiesFilters, ReportingDetailPropertiesSorting, Reports, SentMessage, SentMessages, Status, SubmittedMessage, SubmittedMessages, SummaryReport, SummaryReportData, SummaryReportProperties, DeliveryReportsApi, MessagingApi, MessagingReportsApi, RepliesApi) {
   'use strict';
 
   /**
@@ -88,16 +88,6 @@
      * @property {module:model/InlineResponse400}
      */
     InlineResponse400: InlineResponse400,
-    /**
-     * The MessageFormat model constructor.
-     * @property {module:model/MessageFormat}
-     */
-    MessageFormat: MessageFormat,
-    /**
-     * The MessageStatus model constructor.
-     * @property {module:model/MessageStatus}
-     */
-    MessageStatus: MessageStatus,
     /**
      * The MessageStatusCode model constructor.
      * @property {module:model/MessageStatusCode}
