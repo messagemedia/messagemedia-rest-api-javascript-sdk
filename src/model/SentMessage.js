@@ -23,18 +23,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/MessageFormat'], factory);
+    define(['ApiClient'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./MessageFormat'));
+    module.exports = factory(require('../ApiClient'));
   } else {
     // Browser globals (root is window)
     if (!root.MessagemediaRestApi) {
       root.MessagemediaRestApi = {};
     }
-    root.MessagemediaRestApi.SentMessage = factory(root.MessagemediaRestApi.ApiClient, root.MessagemediaRestApi.MessageFormat);
+    root.MessagemediaRestApi.SentMessage = factory(root.MessagemediaRestApi.ApiClient);
   }
-}(this, function(ApiClient, MessageFormat) {
+}(this, function(ApiClient) {
   'use strict';
 
 
@@ -99,7 +99,7 @@
         obj['destination_address_country'] = ApiClient.convertToType(data['destination_address_country'], 'String');
       }
       if (data.hasOwnProperty('format')) {
-        obj['format'] = MessageFormat.constructFromObject(data['format']);
+        obj['format'] = ApiClient.convertToType(data['format'], 'String');
       }
       if (data.hasOwnProperty('id')) {
         obj['id'] = ApiClient.convertToType(data['id'], 'String');
@@ -154,7 +154,8 @@
    */
   exports.prototype['destination_address_country'] = undefined;
   /**
-   * @member {module:model/MessageFormat} format
+   * Format of message, SMS or VOICE
+   * @member {module:model/SentMessage.FormatEnum} format
    */
   exports.prototype['format'] = undefined;
   /**
@@ -188,6 +189,23 @@
    */
   exports.prototype['timestamp'] = undefined;
 
+
+  /**
+   * Allowed values for the <code>format</code> property.
+   * @enum {String}
+   * @readonly
+   */
+  exports.FormatEnum = {
+    /**
+     * value: "SMS"
+     * @const
+     */
+    "SMS": "SMS",
+    /**
+     * value: "VOICE"
+     * @const
+     */
+    "VOICE": "VOICE"  };
 
 
   return exports;

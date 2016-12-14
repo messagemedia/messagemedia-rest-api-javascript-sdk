@@ -122,9 +122,8 @@ exports.prototype['delivery_report'] = false;
   /**
    * Format of message, SMS or VOICE.
    * @member {module:model/NewMessage.FormatEnum} format
-   * @default 'SMS'
    */
-exports.prototype['format'] = 'SMS';
+exports.prototype['format'] = undefined;
 
   /**
    * Date time after which the message expires and will not be sent

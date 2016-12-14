@@ -23,18 +23,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/MessageStatus', 'model/MessageStatusCode'], factory);
+    define(['ApiClient', 'model/MessageStatusCode'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./MessageStatus'), require('./MessageStatusCode'));
+    module.exports = factory(require('../ApiClient'), require('./MessageStatusCode'));
   } else {
     // Browser globals (root is window)
     if (!root.MessagemediaRestApi) {
       root.MessagemediaRestApi = {};
     }
-    root.MessagemediaRestApi.DeliveryReport = factory(root.MessagemediaRestApi.ApiClient, root.MessagemediaRestApi.MessageStatus, root.MessagemediaRestApi.MessageStatusCode);
+    root.MessagemediaRestApi.DeliveryReport = factory(root.MessagemediaRestApi.ApiClient, root.MessagemediaRestApi.MessageStatusCode);
   }
-}(this, function(ApiClient, MessageStatus, MessageStatusCode) {
+}(this, function(ApiClient, MessageStatusCode) {
   'use strict';
 
 
@@ -108,7 +108,7 @@
         obj['source_address_country'] = ApiClient.convertToType(data['source_address_country'], 'String');
       }
       if (data.hasOwnProperty('status')) {
-        obj['status'] = MessageStatus.constructFromObject(data['status']);
+        obj['status'] = ApiClient.convertToType(data['status'], 'String');
       }
       if (data.hasOwnProperty('status_code')) {
         obj['status_code'] = MessageStatusCode.constructFromObject(data['status_code']);
@@ -138,9 +138,8 @@
   /**
    * Format of message, SMS or VOICE
    * @member {module:model/DeliveryReport.FormatEnum} format
-   * @default 'SMS'
    */
-  exports.prototype['format'] = 'SMS';
+  exports.prototype['format'] = undefined;
   /**
    * Unique ID for this delivery report
    * @member {String} id
@@ -167,7 +166,8 @@
    */
   exports.prototype['source_address_country'] = undefined;
   /**
-   * @member {module:model/MessageStatus} status
+   * Status of the message
+   * @member {module:model/DeliveryReport.StatusEnum} status
    */
   exports.prototype['status'] = undefined;
   /**
@@ -197,6 +197,68 @@
      * @const
      */
     "VOICE": "VOICE"  };
+
+  /**
+   * Allowed values for the <code>status</code> property.
+   * @enum {String}
+   * @readonly
+   */
+  exports.StatusEnum = {
+    /**
+     * value: "queued"
+     * @const
+     */
+    "queued": "queued",
+    /**
+     * value: "processing"
+     * @const
+     */
+    "processing": "processing",
+    /**
+     * value: "processed"
+     * @const
+     */
+    "processed": "processed",
+    /**
+     * value: "scheduled"
+     * @const
+     */
+    "scheduled": "scheduled",
+    /**
+     * value: "cancelled"
+     * @const
+     */
+    "cancelled": "cancelled",
+    /**
+     * value: "enroute"
+     * @const
+     */
+    "enroute": "enroute",
+    /**
+     * value: "held"
+     * @const
+     */
+    "held": "held",
+    /**
+     * value: "submitted"
+     * @const
+     */
+    "submitted": "submitted",
+    /**
+     * value: "delivered"
+     * @const
+     */
+    "delivered": "delivered",
+    /**
+     * value: "expired"
+     * @const
+     */
+    "expired": "expired",
+    /**
+     * value: "rejected"
+     * @const
+     */
+    "rejected": "rejected"  };
 
 
   return exports;
