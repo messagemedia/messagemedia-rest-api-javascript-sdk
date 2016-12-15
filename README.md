@@ -1,11 +1,11 @@
-# messagemedia-rest-api
+# MessageMedia REST API JavaScript SDK
 
 MessagemediaRestApi - JavaScript client for messagemedia-rest-api
 Australia's Leading Messaging Solutions for Business and Enterprise.
 
 - API version: 1.0.0
 - Package version: 1.0.0
-- Build date: 2016-12-15T03:15:43.681Z
+- Build date: 2016-12-15T03:27:43.740Z
 For more information, please visit [https://www.messagemedia.com/contact-us](https://www.messagemedia.com/contact-us)
 
 ## Installation
