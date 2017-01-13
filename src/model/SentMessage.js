@@ -154,7 +154,7 @@
    */
   exports.prototype['destination_address_country'] = undefined;
   /**
-   * Format of message, SMS or VOICE
+   * Format of message, SMS or TTS (Text To Speech)
    * @member {module:model/SentMessage.FormatEnum} format
    */
   exports.prototype['format'] = undefined;
@@ -202,10 +202,10 @@
      */
     "SMS": "SMS",
     /**
-     * value: "VOICE"
+     * value: "TTS"
      * @const
      */
-    "VOICE": "VOICE"  };
+    "TTS": "TTS"  };
 
 
   return exports;

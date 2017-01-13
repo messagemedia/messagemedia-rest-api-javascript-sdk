@@ -120,7 +120,7 @@ exports.prototype['destination_number'] = undefined;
 exports.prototype['delivery_report'] = false;
 
   /**
-   * Format of message, SMS or VOICE.
+   * Format of message, SMS or TTS (Text To Speech).
    * @member {module:model/NewMessage.FormatEnum} format
    */
 exports.prototype['format'] = undefined;

@@ -64,7 +64,7 @@
 
     /**
      * Check delivery reports
-     * Return up to 100 delivery reports that have been received and haven&#39;t  been confirmed using the confirm reports endpoint
+     * Return up to 100 delivery reports that have been received and haven&#39;t been confirmed using the confirm reports endpoint
      * @param {module:api/DeliveryReportsApi~checkReportsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Reports}
      */

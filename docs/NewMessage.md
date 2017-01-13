@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **content** | **String** | Content of the message | [optional] 
 **destinationNumber** | **String** | Destination number of the message | [optional] 
 **deliveryReport** | **Boolean** | Request a delivery report for this message | [optional] [default to false]
-**format** | **String** | Format of message, SMS or VOICE. | [optional] 
+**format** | **String** | Format of message, SMS or TTS (Text To Speech). | [optional] 
 **messageExpiryTimestamp** | **Date** | Date time after which the message expires and will not be sent | [optional] 
 **metadata** | **Object** | Metadata for the message specified as a set of key value pairs, each key can be up to 100 characters long and each value can be up to 256 characters long &#x60;&#x60;&#x60; {    \&quot;myKey\&quot;: \&quot;myValue\&quot;,    \&quot;anotherKey\&quot;: \&quot;anotherValue\&quot; } &#x60;&#x60;&#x60;  | [optional] 
 **scheduled** | **Date** | Scheduled delivery date time of the message | [optional] 
@@ -21,7 +21,7 @@ Name | Type | Description | Notes
 
 * `SMS` (value: `"SMS"`)
 
-* `VOICE` (value: `"VOICE"`)
+* `TTS` (value: `"TTS"`)
 
 
 

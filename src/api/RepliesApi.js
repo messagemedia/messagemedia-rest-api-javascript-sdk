@@ -64,7 +64,7 @@
 
     /**
      * Check replies
-     * Return up to 100 reply messages that have been received and haven&#39;t  been confirmed using the confirm replies endpoint
+     * Return up to 100 reply messages that have been received and haven&#39;t been confirmed using the confirm replies endpoint
      * @param {module:api/RepliesApi~checkRepliesCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Replies}
      */

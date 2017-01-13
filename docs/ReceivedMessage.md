@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **content** | **String** | Content of the message | [optional] 
 **destinationAddress** | **String** | Address this message was delivered to. If this message was received in response to a sent message, this is the source address of the sent message | [optional] 
 **destinationAddressCountry** | **String** | Country associated with the destination address | [optional] 
-**format** | **String** | Format of message, SMS or VOICE | [optional] 
+**format** | **String** | Format of message, SMS or TTS (Text To Speech) | [optional] 
 **id** | **String** | Unique ID for this reply | [optional] 
 **inResponseTo** | **String** | If this message was received in response to a sent message, this is the ID of the sent message | [optional] 
 **metadata** | **Object** | If this message was received in response to a sent message, this is the metadata associated with the sent message | [optional] 
@@ -36,7 +36,7 @@ Name | Type | Description | Notes
 
 * `SMS` (value: `"SMS"`)
 
-* `VOICE` (value: `"VOICE"`)
+* `TTS` (value: `"TTS"`)
 
 
 

@@ -133,7 +133,7 @@
    */
   exports.prototype['delivery_report'] = false;
   /**
-   * Format of message, SMS or VOICE.
+   * Format of message, SMS or TTS (Text To Speech).
    * @member {module:model/NewMessage.FormatEnum} format
    */
   exports.prototype['format'] = undefined;
@@ -175,10 +175,10 @@
      */
     "SMS": "SMS",
     /**
-     * value: "VOICE"
+     * value: "TTS"
      * @const
      */
-    "VOICE": "VOICE"  };
+    "TTS": "TTS"  };
 
   /**
    * Allowed values for the <code>source_number_type</code> property.
