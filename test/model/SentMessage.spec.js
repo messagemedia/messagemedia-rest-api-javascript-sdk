@@ -135,6 +135,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property units (base name: "units")', function() {
+      // uncomment below and update the code to test the property units
+      //var instane = new MessagemediaRestApi.SentMessage();
+      //expect(instance).to.be();
+    });
+
     it('should have the property timestamp (base name: "timestamp")', function() {
       // uncomment below and update the code to test the property timestamp
       //var instane = new MessagemediaRestApi.SentMessage();
