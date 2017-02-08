@@ -129,6 +129,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property accounts (base name: "accounts")', function() {
+      // uncomment below and update the code to test the property accounts
+      //var instane = new MessagemediaRestApi.ReportingDetailPropertiesFilters();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

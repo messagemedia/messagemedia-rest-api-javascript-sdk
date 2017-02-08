@@ -23,18 +23,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/DeliveryReports', 'model/SummaryReport', 'model/ReceivedMessages', 'model/SentMessages'], factory);
+    define(['ApiClient', 'model/DeliveryReports', 'model/SummaryReport', 'model/MetadataKeysResponse', 'model/ReceivedMessages', 'model/SentMessages'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/DeliveryReports'), require('../model/SummaryReport'), require('../model/ReceivedMessages'), require('../model/SentMessages'));
+    module.exports = factory(require('../ApiClient'), require('../model/DeliveryReports'), require('../model/SummaryReport'), require('../model/MetadataKeysResponse'), require('../model/ReceivedMessages'), require('../model/SentMessages'));
   } else {
     // Browser globals (root is window)
     if (!root.MessagemediaRestApi) {
       root.MessagemediaRestApi = {};
     }
-    root.MessagemediaRestApi.MessagingReportsApi = factory(root.MessagemediaRestApi.ApiClient, root.MessagemediaRestApi.DeliveryReports, root.MessagemediaRestApi.SummaryReport, root.MessagemediaRestApi.ReceivedMessages, root.MessagemediaRestApi.SentMessages);
+    root.MessagemediaRestApi.MessagingReportsApi = factory(root.MessagemediaRestApi.ApiClient, root.MessagemediaRestApi.DeliveryReports, root.MessagemediaRestApi.SummaryReport, root.MessagemediaRestApi.MetadataKeysResponse, root.MessagemediaRestApi.ReceivedMessages, root.MessagemediaRestApi.SentMessages);
   }
-}(this, function(ApiClient, DeliveryReports, SummaryReport, ReceivedMessages, SentMessages) {
+}(this, function(ApiClient, DeliveryReports, SummaryReport, MetadataKeysResponse, ReceivedMessages, SentMessages) {
   'use strict';
 
   /**
@@ -222,6 +222,72 @@
 
       return this.apiClient.callApi(
         '/reporting/delivery_reports/summary', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getMetadataKeys operation.
+     * @callback module:api/MessagingReportsApi~getMetadataKeysCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/MetadataKeysResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Returns a list of metadata keys
+     * Returns a list of all metadata keys used for the specified message type during the specified time. Results are limited to 100 keys.
+     * @param {module:model/String} messageType Message type. Possible values are sent messages, received messages and delivery receipts.
+     * @param {Date} startDate Start date time for report window. By default, the timezone for this parameter will be taken from the account settings for the account associated with the credentials used to make the request, or the account included in the Account parameter. This can be overridden using the timezone parameter per request.
+     * @param {Date} endDate End date time for report window. By default, the timezone for this parameter will be taken from the account settings for the account associated with the credentials used to make the request, or the account included in the Account parameter. This can be overridden using the timezone parameter per request.
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.account Filter results by a specific account. By default results will be returned for the account associated with the authentication credentials and all sub accounts.
+     * @param {String} opts.timezone The timezone to use for the context of the request. If provided this will be used as the timezone for the start date and end date parameters, and all datetime fields returns in the response. The timezone should be provided as a IANA (Internet Assigned Numbers Authority) time zone database zone name, i.e. &#39;Australia/Melbourne&#39;.
+     * @param {module:api/MessagingReportsApi~getMetadataKeysCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/MetadataKeysResponse}
+     */
+    this.getMetadataKeys = function(messageType, startDate, endDate, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'messageType' is set
+      if (messageType == undefined || messageType == null) {
+        throw "Missing the required parameter 'messageType' when calling getMetadataKeys";
+      }
+
+      // verify the required parameter 'startDate' is set
+      if (startDate == undefined || startDate == null) {
+        throw "Missing the required parameter 'startDate' when calling getMetadataKeys";
+      }
+
+      // verify the required parameter 'endDate' is set
+      if (endDate == undefined || endDate == null) {
+        throw "Missing the required parameter 'endDate' when calling getMetadataKeys";
+      }
+
+
+      var pathParams = {
+        'messageType': messageType
+      };
+      var queryParams = {
+        'start_date': startDate,
+        'end_date': endDate,
+        'account': opts['account'],
+        'timezone': opts['timezone']
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['basic'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = MetadataKeysResponse;
+
+      return this.apiClient.callApi(
+        '/reporting/{messageType}/metadata/keys', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
