@@ -77,16 +77,6 @@
         done();
       });
     });
-    describe('getMetadataKeys', function() {
-      it('should call getMetadataKeys successfully', function(done) {
-        //uncomment below and update the code to test getMetadataKeys
-        //instance.getMetadataKeys(pet, function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('getReceivedMessagesDetail', function() {
       it('should call getReceivedMessagesDetail successfully', function(done) {
         //uncomment below and update the code to test getReceivedMessagesDetail

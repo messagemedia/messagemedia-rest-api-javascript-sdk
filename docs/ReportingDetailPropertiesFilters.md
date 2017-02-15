@@ -14,6 +14,5 @@ Name | Type | Description | Notes
 **statusCode** | **String** |  | [optional] 
 **status** | **String** |  | [optional] 
 **action** | **String** |  | [optional] 
-**accounts** | **[String]** | List of accounts that were used to generate this report | [optional] 
 
 

@@ -65,7 +65,6 @@
 
 
 
-
   };
 
   /**
@@ -111,9 +110,6 @@
       }
       if (data.hasOwnProperty('action')) {
         obj['action'] = ApiClient.convertToType(data['action'], 'String');
-      }
-      if (data.hasOwnProperty('accounts')) {
-        obj['accounts'] = ApiClient.convertToType(data['accounts'], ['String']);
       }
     }
     return obj;
@@ -163,11 +159,6 @@
    * @member {String} action
    */
   exports.prototype['action'] = undefined;
-  /**
-   * List of accounts that were used to generate this report
-   * @member {Array.<String>} accounts
-   */
-  exports.prototype['accounts'] = undefined;
 
 
 

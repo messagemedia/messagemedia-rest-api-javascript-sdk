@@ -5,7 +5,7 @@ Australia's Leading Messaging Solutions for Business and Enterprise.
 
 - API version: 1.0.0
 - Package version: 1.0.0
-- Build date: 2017-02-08T06:10:54.611Z
+- Build date: 2017-02-15T06:01:05.066Z
 For more information, please visit [https://www.messagemedia.com/contact-us](https://www.messagemedia.com/contact-us)
 
 ## Installation
@@ -85,7 +85,6 @@ Class | Method | HTTP request | Description
 *MessagemediaRestApi.MessagingApi* | [**updateMessageStatus**](docs/MessagingApi.md#updateMessageStatus) | **PUT** /messages/{messageId} | Cancel a scheduled message
 *MessagemediaRestApi.MessagingReportsApi* | [**getDeliveryReportsDetail**](docs/MessagingReportsApi.md#getDeliveryReportsDetail) | **GET** /reporting/delivery_reports/detail | Returns a list of delivery reports
 *MessagemediaRestApi.MessagingReportsApi* | [**getDeliveryReportsSummary**](docs/MessagingReportsApi.md#getDeliveryReportsSummary) | **GET** /reporting/delivery_reports/summary | Returns a summarised report of delivery reports
-*MessagemediaRestApi.MessagingReportsApi* | [**getMetadataKeys**](docs/MessagingReportsApi.md#getMetadataKeys) | **GET** /reporting/{messageType}/metadata/keys | Returns a list of metadata keys
 *MessagemediaRestApi.MessagingReportsApi* | [**getReceivedMessagesDetail**](docs/MessagingReportsApi.md#getReceivedMessagesDetail) | **GET** /reporting/received_messages/detail | Returns a list message received
 *MessagemediaRestApi.MessagingReportsApi* | [**getReceivedMessagesSummary**](docs/MessagingReportsApi.md#getReceivedMessagesSummary) | **GET** /reporting/received_messages/summary | Returns a summarised report of messages received
 *MessagemediaRestApi.MessagingReportsApi* | [**getSentMessagesDetail**](docs/MessagingReportsApi.md#getSentMessagesDetail) | **GET** /reporting/sent_messages/detail | Returns a list of message sent
@@ -102,8 +101,6 @@ Class | Method | HTTP request | Description
  - [MessagemediaRestApi.InlineResponse400](docs/InlineResponse400.md)
  - [MessagemediaRestApi.MessageStatusCode](docs/MessageStatusCode.md)
  - [MessagemediaRestApi.Messages](docs/Messages.md)
- - [MessagemediaRestApi.MetadataKeysResponse](docs/MetadataKeysResponse.md)
- - [MessagemediaRestApi.MetadataKeysResponseProperties](docs/MetadataKeysResponseProperties.md)
  - [MessagemediaRestApi.NewMessage](docs/NewMessage.md)
  - [MessagemediaRestApi.Pagination](docs/Pagination.md)
  - [MessagemediaRestApi.ReceivedMessage](docs/ReceivedMessage.md)
