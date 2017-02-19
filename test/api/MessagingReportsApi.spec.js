@@ -57,6 +57,36 @@
   }
 
   describe('MessagingReportsApi', function() {
+    describe('getAsyncReportById', function() {
+      it('should call getAsyncReportById successfully', function(done) {
+        //uncomment below and update the code to test getAsyncReportById
+        //instance.getAsyncReportById(pet, function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('getAsyncReportDataById', function() {
+      it('should call getAsyncReportDataById successfully', function(done) {
+        //uncomment below and update the code to test getAsyncReportDataById
+        //instance.getAsyncReportDataById(pet, function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('getAsyncReports', function() {
+      it('should call getAsyncReports successfully', function(done) {
+        //uncomment below and update the code to test getAsyncReports
+        //instance.getAsyncReports(pet, function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('getDeliveryReportsDetail', function() {
       it('should call getDeliveryReportsDetail successfully', function(done) {
         //uncomment below and update the code to test getDeliveryReportsDetail
@@ -71,6 +101,16 @@
       it('should call getDeliveryReportsSummary successfully', function(done) {
         //uncomment below and update the code to test getDeliveryReportsSummary
         //instance.getDeliveryReportsSummary(pet, function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('getMetadataKeys', function() {
+      it('should call getMetadataKeys successfully', function(done) {
+        //uncomment below and update the code to test getMetadataKeys
+        //instance.getMetadataKeys(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -111,6 +151,66 @@
       it('should call getSentMessagesSummary successfully', function(done) {
         //uncomment below and update the code to test getSentMessagesSummary
         //instance.getSentMessagesSummary(pet, function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('submitAsyncDeliveryReportsDetail', function() {
+      it('should call submitAsyncDeliveryReportsDetail successfully', function(done) {
+        //uncomment below and update the code to test submitAsyncDeliveryReportsDetail
+        //instance.submitAsyncDeliveryReportsDetail(pet, function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('submitDeliveryReportsSummary', function() {
+      it('should call submitDeliveryReportsSummary successfully', function(done) {
+        //uncomment below and update the code to test submitDeliveryReportsSummary
+        //instance.submitDeliveryReportsSummary(pet, function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('submitReceivedMessagesDetail', function() {
+      it('should call submitReceivedMessagesDetail successfully', function(done) {
+        //uncomment below and update the code to test submitReceivedMessagesDetail
+        //instance.submitReceivedMessagesDetail(pet, function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('submitReceivedMessagesSummary', function() {
+      it('should call submitReceivedMessagesSummary successfully', function(done) {
+        //uncomment below and update the code to test submitReceivedMessagesSummary
+        //instance.submitReceivedMessagesSummary(pet, function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('submitSentMessagesDetail', function() {
+      it('should call submitSentMessagesDetail successfully', function(done) {
+        //uncomment below and update the code to test submitSentMessagesDetail
+        //instance.submitSentMessagesDetail(pet, function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('submitSentMessagesSummary', function() {
+      it('should call submitSentMessagesSummary successfully', function(done) {
+        //uncomment below and update the code to test submitSentMessagesSummary
+        //instance.submitSentMessagesSummary(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

@@ -23,12 +23,12 @@
 (function(factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/DeliveryReport', 'model/DeliveryReportId', 'model/DeliveryReports', 'model/InlineResponse400', 'model/MessageStatusCode', 'model/Messages', 'model/NewMessage', 'model/Pagination', 'model/ReceivedMessage', 'model/ReceivedMessages', 'model/Replies', 'model/Reply', 'model/ReplyId', 'model/ReplyVendorAccountId', 'model/Report', 'model/ReportingDetailProperties', 'model/ReportingDetailPropertiesFilters', 'model/ReportingDetailPropertiesSorting', 'model/Reports', 'model/SentMessage', 'model/SentMessages', 'model/Status', 'model/SubmittedMessage', 'model/SubmittedMessages', 'model/SummaryReport', 'model/SummaryReportData', 'model/SummaryReportProperties', 'api/DeliveryReportsApi', 'api/MessagingApi', 'api/MessagingReportsApi', 'api/RepliesApi'], factory);
+    define(['ApiClient', 'model/AccountsBody', 'model/ActionBody', 'model/AsyncDeliveryReportDetailRequest', 'model/AsyncDeliveryReportsSummaryRequest', 'model/AsyncDeliverySentMessagesRequest', 'model/AsyncReceivedMessagesDetailRequest', 'model/AsyncReceivedMessagesSummaryRequest', 'model/AsyncReport', 'model/AsyncReportResponse', 'model/AsyncSentMessagesDetailRequest', 'model/DeliveryReport', 'model/DeliveryReportBody', 'model/DeliveryReportId', 'model/DeliveryReports', 'model/DestinationAddressBody', 'model/DestinationAddressCountryBody', 'model/EndDateBody', 'model/InlineResponse200', 'model/InlineResponse400', 'model/MessageFormatBody', 'model/MessageStatusCode', 'model/Messages', 'model/MetadataKeyBody', 'model/MetadataKeysResponse', 'model/MetadataKeysResponseProperties', 'model/MetadataValueBody', 'model/NewMessage', 'model/Pagination', 'model/ReceivedMessage', 'model/ReceivedMessages', 'model/Replies', 'model/Reply', 'model/ReplyId', 'model/ReplyVendorAccountId', 'model/Report', 'model/ReportingDetailProperties', 'model/ReportingDetailPropertiesFilters', 'model/ReportingDetailPropertiesSorting', 'model/Reports', 'model/SentMessage', 'model/SentMessages', 'model/SortDirectionBody', 'model/SourceAddressBody', 'model/SourceAddressCountryBody', 'model/StartDateBody', 'model/Status', 'model/StatusBody', 'model/StatusCodeBody', 'model/SubmittedMessage', 'model/SubmittedMessages', 'model/SummaryByBody', 'model/SummaryFieldBody', 'model/SummaryReport', 'model/SummaryReportData', 'model/SummaryReportProperties', 'model/TimezoneBody', 'api/DeliveryReportsApi', 'api/MessagingApi', 'api/MessagingReportsApi', 'api/RepliesApi'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('./ApiClient'), require('./model/DeliveryReport'), require('./model/DeliveryReportId'), require('./model/DeliveryReports'), require('./model/InlineResponse400'), require('./model/MessageStatusCode'), require('./model/Messages'), require('./model/NewMessage'), require('./model/Pagination'), require('./model/ReceivedMessage'), require('./model/ReceivedMessages'), require('./model/Replies'), require('./model/Reply'), require('./model/ReplyId'), require('./model/ReplyVendorAccountId'), require('./model/Report'), require('./model/ReportingDetailProperties'), require('./model/ReportingDetailPropertiesFilters'), require('./model/ReportingDetailPropertiesSorting'), require('./model/Reports'), require('./model/SentMessage'), require('./model/SentMessages'), require('./model/Status'), require('./model/SubmittedMessage'), require('./model/SubmittedMessages'), require('./model/SummaryReport'), require('./model/SummaryReportData'), require('./model/SummaryReportProperties'), require('./api/DeliveryReportsApi'), require('./api/MessagingApi'), require('./api/MessagingReportsApi'), require('./api/RepliesApi'));
+    module.exports = factory(require('./ApiClient'), require('./model/AccountsBody'), require('./model/ActionBody'), require('./model/AsyncDeliveryReportDetailRequest'), require('./model/AsyncDeliveryReportsSummaryRequest'), require('./model/AsyncDeliverySentMessagesRequest'), require('./model/AsyncReceivedMessagesDetailRequest'), require('./model/AsyncReceivedMessagesSummaryRequest'), require('./model/AsyncReport'), require('./model/AsyncReportResponse'), require('./model/AsyncSentMessagesDetailRequest'), require('./model/DeliveryReport'), require('./model/DeliveryReportBody'), require('./model/DeliveryReportId'), require('./model/DeliveryReports'), require('./model/DestinationAddressBody'), require('./model/DestinationAddressCountryBody'), require('./model/EndDateBody'), require('./model/InlineResponse200'), require('./model/InlineResponse400'), require('./model/MessageFormatBody'), require('./model/MessageStatusCode'), require('./model/Messages'), require('./model/MetadataKeyBody'), require('./model/MetadataKeysResponse'), require('./model/MetadataKeysResponseProperties'), require('./model/MetadataValueBody'), require('./model/NewMessage'), require('./model/Pagination'), require('./model/ReceivedMessage'), require('./model/ReceivedMessages'), require('./model/Replies'), require('./model/Reply'), require('./model/ReplyId'), require('./model/ReplyVendorAccountId'), require('./model/Report'), require('./model/ReportingDetailProperties'), require('./model/ReportingDetailPropertiesFilters'), require('./model/ReportingDetailPropertiesSorting'), require('./model/Reports'), require('./model/SentMessage'), require('./model/SentMessages'), require('./model/SortDirectionBody'), require('./model/SourceAddressBody'), require('./model/SourceAddressCountryBody'), require('./model/StartDateBody'), require('./model/Status'), require('./model/StatusBody'), require('./model/StatusCodeBody'), require('./model/SubmittedMessage'), require('./model/SubmittedMessages'), require('./model/SummaryByBody'), require('./model/SummaryFieldBody'), require('./model/SummaryReport'), require('./model/SummaryReportData'), require('./model/SummaryReportProperties'), require('./model/TimezoneBody'), require('./api/DeliveryReportsApi'), require('./api/MessagingApi'), require('./api/MessagingReportsApi'), require('./api/RepliesApi'));
   }
-}(function(ApiClient, DeliveryReport, DeliveryReportId, DeliveryReports, InlineResponse400, MessageStatusCode, Messages, NewMessage, Pagination, ReceivedMessage, ReceivedMessages, Replies, Reply, ReplyId, ReplyVendorAccountId, Report, ReportingDetailProperties, ReportingDetailPropertiesFilters, ReportingDetailPropertiesSorting, Reports, SentMessage, SentMessages, Status, SubmittedMessage, SubmittedMessages, SummaryReport, SummaryReportData, SummaryReportProperties, DeliveryReportsApi, MessagingApi, MessagingReportsApi, RepliesApi) {
+}(function(ApiClient, AccountsBody, ActionBody, AsyncDeliveryReportDetailRequest, AsyncDeliveryReportsSummaryRequest, AsyncDeliverySentMessagesRequest, AsyncReceivedMessagesDetailRequest, AsyncReceivedMessagesSummaryRequest, AsyncReport, AsyncReportResponse, AsyncSentMessagesDetailRequest, DeliveryReport, DeliveryReportBody, DeliveryReportId, DeliveryReports, DestinationAddressBody, DestinationAddressCountryBody, EndDateBody, InlineResponse200, InlineResponse400, MessageFormatBody, MessageStatusCode, Messages, MetadataKeyBody, MetadataKeysResponse, MetadataKeysResponseProperties, MetadataValueBody, NewMessage, Pagination, ReceivedMessage, ReceivedMessages, Replies, Reply, ReplyId, ReplyVendorAccountId, Report, ReportingDetailProperties, ReportingDetailPropertiesFilters, ReportingDetailPropertiesSorting, Reports, SentMessage, SentMessages, SortDirectionBody, SourceAddressBody, SourceAddressCountryBody, StartDateBody, Status, StatusBody, StatusCodeBody, SubmittedMessage, SubmittedMessages, SummaryByBody, SummaryFieldBody, SummaryReport, SummaryReportData, SummaryReportProperties, TimezoneBody, DeliveryReportsApi, MessagingApi, MessagingReportsApi, RepliesApi) {
   'use strict';
 
   /**
@@ -69,10 +69,65 @@
      */
     ApiClient: ApiClient,
     /**
+     * The AccountsBody model constructor.
+     * @property {module:model/AccountsBody}
+     */
+    AccountsBody: AccountsBody,
+    /**
+     * The ActionBody model constructor.
+     * @property {module:model/ActionBody}
+     */
+    ActionBody: ActionBody,
+    /**
+     * The AsyncDeliveryReportDetailRequest model constructor.
+     * @property {module:model/AsyncDeliveryReportDetailRequest}
+     */
+    AsyncDeliveryReportDetailRequest: AsyncDeliveryReportDetailRequest,
+    /**
+     * The AsyncDeliveryReportsSummaryRequest model constructor.
+     * @property {module:model/AsyncDeliveryReportsSummaryRequest}
+     */
+    AsyncDeliveryReportsSummaryRequest: AsyncDeliveryReportsSummaryRequest,
+    /**
+     * The AsyncDeliverySentMessagesRequest model constructor.
+     * @property {module:model/AsyncDeliverySentMessagesRequest}
+     */
+    AsyncDeliverySentMessagesRequest: AsyncDeliverySentMessagesRequest,
+    /**
+     * The AsyncReceivedMessagesDetailRequest model constructor.
+     * @property {module:model/AsyncReceivedMessagesDetailRequest}
+     */
+    AsyncReceivedMessagesDetailRequest: AsyncReceivedMessagesDetailRequest,
+    /**
+     * The AsyncReceivedMessagesSummaryRequest model constructor.
+     * @property {module:model/AsyncReceivedMessagesSummaryRequest}
+     */
+    AsyncReceivedMessagesSummaryRequest: AsyncReceivedMessagesSummaryRequest,
+    /**
+     * The AsyncReport model constructor.
+     * @property {module:model/AsyncReport}
+     */
+    AsyncReport: AsyncReport,
+    /**
+     * The AsyncReportResponse model constructor.
+     * @property {module:model/AsyncReportResponse}
+     */
+    AsyncReportResponse: AsyncReportResponse,
+    /**
+     * The AsyncSentMessagesDetailRequest model constructor.
+     * @property {module:model/AsyncSentMessagesDetailRequest}
+     */
+    AsyncSentMessagesDetailRequest: AsyncSentMessagesDetailRequest,
+    /**
      * The DeliveryReport model constructor.
      * @property {module:model/DeliveryReport}
      */
     DeliveryReport: DeliveryReport,
+    /**
+     * The DeliveryReportBody model constructor.
+     * @property {module:model/DeliveryReportBody}
+     */
+    DeliveryReportBody: DeliveryReportBody,
     /**
      * The DeliveryReportId model constructor.
      * @property {module:model/DeliveryReportId}
@@ -84,10 +139,35 @@
      */
     DeliveryReports: DeliveryReports,
     /**
+     * The DestinationAddressBody model constructor.
+     * @property {module:model/DestinationAddressBody}
+     */
+    DestinationAddressBody: DestinationAddressBody,
+    /**
+     * The DestinationAddressCountryBody model constructor.
+     * @property {module:model/DestinationAddressCountryBody}
+     */
+    DestinationAddressCountryBody: DestinationAddressCountryBody,
+    /**
+     * The EndDateBody model constructor.
+     * @property {module:model/EndDateBody}
+     */
+    EndDateBody: EndDateBody,
+    /**
+     * The InlineResponse200 model constructor.
+     * @property {module:model/InlineResponse200}
+     */
+    InlineResponse200: InlineResponse200,
+    /**
      * The InlineResponse400 model constructor.
      * @property {module:model/InlineResponse400}
      */
     InlineResponse400: InlineResponse400,
+    /**
+     * The MessageFormatBody model constructor.
+     * @property {module:model/MessageFormatBody}
+     */
+    MessageFormatBody: MessageFormatBody,
     /**
      * The MessageStatusCode model constructor.
      * @property {module:model/MessageStatusCode}
@@ -98,6 +178,26 @@
      * @property {module:model/Messages}
      */
     Messages: Messages,
+    /**
+     * The MetadataKeyBody model constructor.
+     * @property {module:model/MetadataKeyBody}
+     */
+    MetadataKeyBody: MetadataKeyBody,
+    /**
+     * The MetadataKeysResponse model constructor.
+     * @property {module:model/MetadataKeysResponse}
+     */
+    MetadataKeysResponse: MetadataKeysResponse,
+    /**
+     * The MetadataKeysResponseProperties model constructor.
+     * @property {module:model/MetadataKeysResponseProperties}
+     */
+    MetadataKeysResponseProperties: MetadataKeysResponseProperties,
+    /**
+     * The MetadataValueBody model constructor.
+     * @property {module:model/MetadataValueBody}
+     */
+    MetadataValueBody: MetadataValueBody,
     /**
      * The NewMessage model constructor.
      * @property {module:model/NewMessage}
@@ -174,10 +274,40 @@
      */
     SentMessages: SentMessages,
     /**
+     * The SortDirectionBody model constructor.
+     * @property {module:model/SortDirectionBody}
+     */
+    SortDirectionBody: SortDirectionBody,
+    /**
+     * The SourceAddressBody model constructor.
+     * @property {module:model/SourceAddressBody}
+     */
+    SourceAddressBody: SourceAddressBody,
+    /**
+     * The SourceAddressCountryBody model constructor.
+     * @property {module:model/SourceAddressCountryBody}
+     */
+    SourceAddressCountryBody: SourceAddressCountryBody,
+    /**
+     * The StartDateBody model constructor.
+     * @property {module:model/StartDateBody}
+     */
+    StartDateBody: StartDateBody,
+    /**
      * The Status model constructor.
      * @property {module:model/Status}
      */
     Status: Status,
+    /**
+     * The StatusBody model constructor.
+     * @property {module:model/StatusBody}
+     */
+    StatusBody: StatusBody,
+    /**
+     * The StatusCodeBody model constructor.
+     * @property {module:model/StatusCodeBody}
+     */
+    StatusCodeBody: StatusCodeBody,
     /**
      * The SubmittedMessage model constructor.
      * @property {module:model/SubmittedMessage}
@@ -188,6 +318,16 @@
      * @property {module:model/SubmittedMessages}
      */
     SubmittedMessages: SubmittedMessages,
+    /**
+     * The SummaryByBody model constructor.
+     * @property {module:model/SummaryByBody}
+     */
+    SummaryByBody: SummaryByBody,
+    /**
+     * The SummaryFieldBody model constructor.
+     * @property {module:model/SummaryFieldBody}
+     */
+    SummaryFieldBody: SummaryFieldBody,
     /**
      * The SummaryReport model constructor.
      * @property {module:model/SummaryReport}
@@ -203,6 +343,11 @@
      * @property {module:model/SummaryReportProperties}
      */
     SummaryReportProperties: SummaryReportProperties,
+    /**
+     * The TimezoneBody model constructor.
+     * @property {module:model/TimezoneBody}
+     */
+    TimezoneBody: TimezoneBody,
     /**
      * The DeliveryReportsApi service constructor.
      * @property {module:api/DeliveryReportsApi}

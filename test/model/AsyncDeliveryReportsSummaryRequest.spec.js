@@ -37,7 +37,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new MessagemediaRestApi.ReportingDetailPropertiesFilters();
+    instance = new MessagemediaRestApi.AsyncDeliveryReportsSummaryRequest();
   });
 
   var getProperty = function(object, getter, property) {
@@ -56,82 +56,106 @@
       object[property] = value;
   }
 
-  describe('ReportingDetailPropertiesFilters', function() {
-    it('should create an instance of ReportingDetailPropertiesFilters', function() {
-      // uncomment below and update the code to test ReportingDetailPropertiesFilters
-      //var instane = new MessagemediaRestApi.ReportingDetailPropertiesFilters();
-      //expect(instance).to.be.a(MessagemediaRestApi.ReportingDetailPropertiesFilters);
+  describe('AsyncDeliveryReportsSummaryRequest', function() {
+    it('should create an instance of AsyncDeliveryReportsSummaryRequest', function() {
+      // uncomment below and update the code to test AsyncDeliveryReportsSummaryRequest
+      //var instane = new MessagemediaRestApi.AsyncDeliveryReportsSummaryRequest();
+      //expect(instance).to.be.a(MessagemediaRestApi.AsyncDeliveryReportsSummaryRequest);
     });
 
-    it('should have the property deliveryReport (base name: "delivery_report")', function() {
-      // uncomment below and update the code to test the property deliveryReport
-      //var instane = new MessagemediaRestApi.ReportingDetailPropertiesFilters();
+    it('should have the property summaryBy (base name: "summary_by")', function() {
+      // uncomment below and update the code to test the property summaryBy
+      //var instane = new MessagemediaRestApi.AsyncDeliveryReportsSummaryRequest();
       //expect(instance).to.be();
     });
 
-    it('should have the property destinationAddressCountry (base name: "destination_address_country")', function() {
-      // uncomment below and update the code to test the property destinationAddressCountry
-      //var instane = new MessagemediaRestApi.ReportingDetailPropertiesFilters();
+    it('should have the property summaryField (base name: "summary_field")', function() {
+      // uncomment below and update the code to test the property summaryField
+      //var instane = new MessagemediaRestApi.AsyncDeliveryReportsSummaryRequest();
       //expect(instance).to.be();
     });
 
-    it('should have the property destinationAddress (base name: "destination_address")', function() {
-      // uncomment below and update the code to test the property destinationAddress
-      //var instane = new MessagemediaRestApi.ReportingDetailPropertiesFilters();
+    it('should have the property groupBy (base name: "group_by")', function() {
+      // uncomment below and update the code to test the property groupBy
+      //var instane = new MessagemediaRestApi.AsyncDeliveryReportsSummaryRequest();
       //expect(instance).to.be();
     });
 
-    it('should have the property messageFormat (base name: "message_format")', function() {
-      // uncomment below and update the code to test the property messageFormat
-      //var instane = new MessagemediaRestApi.ReportingDetailPropertiesFilters();
+    it('should have the property startDate (base name: "start_date")', function() {
+      // uncomment below and update the code to test the property startDate
+      //var instane = new MessagemediaRestApi.AsyncDeliveryReportsSummaryRequest();
       //expect(instance).to.be();
     });
 
-    it('should have the property metadataKey (base name: "metadata_key")', function() {
-      // uncomment below and update the code to test the property metadataKey
-      //var instane = new MessagemediaRestApi.ReportingDetailPropertiesFilters();
+    it('should have the property endDate (base name: "end_date")', function() {
+      // uncomment below and update the code to test the property endDate
+      //var instane = new MessagemediaRestApi.AsyncDeliveryReportsSummaryRequest();
       //expect(instance).to.be();
     });
 
-    it('should have the property metadataValue (base name: "metadata_value")', function() {
-      // uncomment below and update the code to test the property metadataValue
-      //var instane = new MessagemediaRestApi.ReportingDetailPropertiesFilters();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property sourceAddressCountry (base name: "source_address_country")', function() {
-      // uncomment below and update the code to test the property sourceAddressCountry
-      //var instane = new MessagemediaRestApi.ReportingDetailPropertiesFilters();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property sourceAddress (base name: "source_address")', function() {
-      // uncomment below and update the code to test the property sourceAddress
-      //var instane = new MessagemediaRestApi.ReportingDetailPropertiesFilters();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property statusCode (base name: "status_code")', function() {
-      // uncomment below and update the code to test the property statusCode
-      //var instane = new MessagemediaRestApi.ReportingDetailPropertiesFilters();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property status (base name: "status")', function() {
-      // uncomment below and update the code to test the property status
-      //var instane = new MessagemediaRestApi.ReportingDetailPropertiesFilters();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property action (base name: "action")', function() {
-      // uncomment below and update the code to test the property action
-      //var instane = new MessagemediaRestApi.ReportingDetailPropertiesFilters();
+    it('should have the property timezone (base name: "timezone")', function() {
+      // uncomment below and update the code to test the property timezone
+      //var instane = new MessagemediaRestApi.AsyncDeliveryReportsSummaryRequest();
       //expect(instance).to.be();
     });
 
     it('should have the property accounts (base name: "accounts")', function() {
       // uncomment below and update the code to test the property accounts
-      //var instane = new MessagemediaRestApi.ReportingDetailPropertiesFilters();
+      //var instane = new MessagemediaRestApi.AsyncDeliveryReportsSummaryRequest();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property destinationAddressCountry (base name: "destination_address_country")', function() {
+      // uncomment below and update the code to test the property destinationAddressCountry
+      //var instane = new MessagemediaRestApi.AsyncDeliveryReportsSummaryRequest();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property destinationAddress (base name: "destination_address")', function() {
+      // uncomment below and update the code to test the property destinationAddress
+      //var instane = new MessagemediaRestApi.AsyncDeliveryReportsSummaryRequest();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property messageFormat (base name: "message_format")', function() {
+      // uncomment below and update the code to test the property messageFormat
+      //var instane = new MessagemediaRestApi.AsyncDeliveryReportsSummaryRequest();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property metadataKey (base name: "metadata_key")', function() {
+      // uncomment below and update the code to test the property metadataKey
+      //var instane = new MessagemediaRestApi.AsyncDeliveryReportsSummaryRequest();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property metadataValue (base name: "metadata_value")', function() {
+      // uncomment below and update the code to test the property metadataValue
+      //var instane = new MessagemediaRestApi.AsyncDeliveryReportsSummaryRequest();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property sourceAddressCountry (base name: "source_address_country")', function() {
+      // uncomment below and update the code to test the property sourceAddressCountry
+      //var instane = new MessagemediaRestApi.AsyncDeliveryReportsSummaryRequest();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property sourceAddress (base name: "source_address")', function() {
+      // uncomment below and update the code to test the property sourceAddress
+      //var instane = new MessagemediaRestApi.AsyncDeliveryReportsSummaryRequest();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property status (base name: "status")', function() {
+      // uncomment below and update the code to test the property status
+      //var instane = new MessagemediaRestApi.AsyncDeliveryReportsSummaryRequest();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property statusCode (base name: "status_code")', function() {
+      // uncomment below and update the code to test the property statusCode
+      //var instane = new MessagemediaRestApi.AsyncDeliveryReportsSummaryRequest();
       //expect(instance).to.be();
     });
 
