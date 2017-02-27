@@ -5,7 +5,7 @@ Australia's Leading Messaging Solutions for Business and Enterprise.
 
 - API version: 1.0.0
 - Package version: 1.0.0
-- Build date: 2017-02-19T22:50:11.048Z
+- Build date: 2017-02-27T23:50:18.060Z
 For more information, please visit [https://www.messagemedia.com/contact-us](https://www.messagemedia.com/contact-us)
 
 ## Installation
@@ -83,9 +83,9 @@ Class | Method | HTTP request | Description
 *MessagemediaRestApi.MessagingApi* | [**getMessageStatus**](docs/MessagingApi.md#getMessageStatus) | **GET** /messages/{messageId} | Get the status of a submitted message
 *MessagemediaRestApi.MessagingApi* | [**sendMessages**](docs/MessagingApi.md#sendMessages) | **POST** /messages | Send one or more messages
 *MessagemediaRestApi.MessagingApi* | [**updateMessageStatus**](docs/MessagingApi.md#updateMessageStatus) | **PUT** /messages/{messageId} | Cancel a scheduled message
-*MessagemediaRestApi.MessagingReportsApi* | [**getAsyncReportById**](docs/MessagingReportsApi.md#getAsyncReportById) | **GET** /reporting/async_reports/{report_id} | Lists an asynchronous report.
+*MessagemediaRestApi.MessagingReportsApi* | [**getAsyncReportById**](docs/MessagingReportsApi.md#getAsyncReportById) | **GET** /reporting/async_reports/{report_id} | Gets a single asynchronous report.
 *MessagemediaRestApi.MessagingReportsApi* | [**getAsyncReportDataById**](docs/MessagingReportsApi.md#getAsyncReportDataById) | **GET** /reporting/async_reports/{report_id}/data | Gets the data of an asynchronous report.
-*MessagemediaRestApi.MessagingReportsApi* | [**getAsyncReports**](docs/MessagingReportsApi.md#getAsyncReports) | **GET** /reporting/async_reports | Gets a single asynchronous report.
+*MessagemediaRestApi.MessagingReportsApi* | [**getAsyncReports**](docs/MessagingReportsApi.md#getAsyncReports) | **GET** /reporting/async_reports | Lists asynchronous reports.
 *MessagemediaRestApi.MessagingReportsApi* | [**getDeliveryReportsDetail**](docs/MessagingReportsApi.md#getDeliveryReportsDetail) | **GET** /reporting/delivery_reports/detail | Returns a list of delivery reports
 *MessagemediaRestApi.MessagingReportsApi* | [**getDeliveryReportsSummary**](docs/MessagingReportsApi.md#getDeliveryReportsSummary) | **GET** /reporting/delivery_reports/summary | Returns a summarised report of delivery reports
 *MessagemediaRestApi.MessagingReportsApi* | [**getMetadataKeys**](docs/MessagingReportsApi.md#getMetadataKeys) | **GET** /reporting/{messageType}/metadata/keys | Returns a list of metadata keys

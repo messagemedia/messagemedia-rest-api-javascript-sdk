@@ -63,8 +63,8 @@
      */
 
     /**
-     * Lists an asynchronous report.
-     * This endpoints lists metadata of a requested asynchronous report.
+     * Gets a single asynchronous report.
+     * This endpoints shows information of a single requested asynchronous report.
      * @param {String} reportId Unique ID of the async report
      * @param {module:api/MessagingReportsApi~getAsyncReportByIdCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/AsyncReport}
@@ -155,18 +155,24 @@
      */
 
     /**
-     * Gets a single asynchronous report.
-     * This endpoint lists metadata about requested async reports.
+     * Lists asynchronous reports.
+     * This endpoint lists all the requested asynchronous reports.
+     * @param {Object} opts Optional parameters
+     * @param {Integer} opts.page Page number for paging through paginated result sets.
+     * @param {Integer} opts.pageSize Number of results to return in a page for paginated result sets.
      * @param {module:api/MessagingReportsApi~getAsyncReportsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/InlineResponse200}
      */
-    this.getAsyncReports = function(callback) {
+    this.getAsyncReports = function(opts, callback) {
+      opts = opts || {};
       var postBody = null;
 
 
       var pathParams = {
       };
       var queryParams = {
+        'page': opts['page'],
+        'page_size': opts['pageSize']
       };
       var headerParams = {
       };

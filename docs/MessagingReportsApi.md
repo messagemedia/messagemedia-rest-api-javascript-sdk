@@ -4,9 +4,9 @@ All URIs are relative to *https://api.messagemedia.com/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getAsyncReportById**](MessagingReportsApi.md#getAsyncReportById) | **GET** /reporting/async_reports/{report_id} | Lists an asynchronous report.
+[**getAsyncReportById**](MessagingReportsApi.md#getAsyncReportById) | **GET** /reporting/async_reports/{report_id} | Gets a single asynchronous report.
 [**getAsyncReportDataById**](MessagingReportsApi.md#getAsyncReportDataById) | **GET** /reporting/async_reports/{report_id}/data | Gets the data of an asynchronous report.
-[**getAsyncReports**](MessagingReportsApi.md#getAsyncReports) | **GET** /reporting/async_reports | Gets a single asynchronous report.
+[**getAsyncReports**](MessagingReportsApi.md#getAsyncReports) | **GET** /reporting/async_reports | Lists asynchronous reports.
 [**getDeliveryReportsDetail**](MessagingReportsApi.md#getDeliveryReportsDetail) | **GET** /reporting/delivery_reports/detail | Returns a list of delivery reports
 [**getDeliveryReportsSummary**](MessagingReportsApi.md#getDeliveryReportsSummary) | **GET** /reporting/delivery_reports/summary | Returns a summarised report of delivery reports
 [**getMetadataKeys**](MessagingReportsApi.md#getMetadataKeys) | **GET** /reporting/{messageType}/metadata/keys | Returns a list of metadata keys
@@ -26,9 +26,9 @@ Method | HTTP request | Description
 # **getAsyncReportById**
 > AsyncReport getAsyncReportById(reportId)
 
-Lists an asynchronous report.
+Gets a single asynchronous report.
 
-This endpoints lists metadata of a requested asynchronous report.
+This endpoints shows information of a single requested asynchronous report.
 
 ### Example
 ```javascript
@@ -128,11 +128,11 @@ Name | Type | Description  | Notes
 
 <a name="getAsyncReports"></a>
 # **getAsyncReports**
-> InlineResponse200 getAsyncReports()
+> InlineResponse200 getAsyncReports(opts)
 
-Gets a single asynchronous report.
+Lists asynchronous reports.
 
-This endpoint lists metadata about requested async reports.
+This endpoint lists all the requested asynchronous reports.
 
 ### Example
 ```javascript
@@ -146,6 +146,11 @@ basic.password = 'YOUR PASSWORD';
 
 var apiInstance = new MessagemediaRestApi.MessagingReportsApi();
 
+var opts = { 
+  'page': 56, // Integer | Page number for paging through paginated result sets.
+  'pageSize': 56, // Integer | Number of results to return in a page for paginated result sets.
+};
+
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
@@ -153,11 +158,15 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getAsyncReports(callback);
+apiInstance.getAsyncReports(opts, callback);
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **Integer**| Page number for paging through paginated result sets. | [optional] 
+ **pageSize** | **Integer**| Number of results to return in a page for paginated result sets. | [optional] 
 
 ### Return type
 
