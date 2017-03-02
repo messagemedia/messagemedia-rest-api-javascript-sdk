@@ -17,6 +17,7 @@ Name | Type | Description | Notes
 **sourceAddressCountry** | [**SourceAddressCountryBody**](SourceAddressCountryBody.md) |  | [optional] 
 **sourceAddress** | [**SourceAddressBody**](SourceAddressBody.md) |  | [optional] 
 **action** | [**ActionBody**](ActionBody.md) |  | [optional] 
+**deliveryOptions** | [**DeliveryOptionsBody**](DeliveryOptionsBody.md) |  | [optional] 
 
 
 <a name="SortByEnum"></a>

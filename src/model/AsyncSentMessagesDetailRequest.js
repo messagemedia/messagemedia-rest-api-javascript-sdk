@@ -23,18 +23,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/AccountsBody', 'model/DeliveryReportBody', 'model/DestinationAddressBody', 'model/DestinationAddressCountryBody', 'model/EndDateBody', 'model/MessageFormatBody', 'model/MetadataKeyBody', 'model/MetadataValueBody', 'model/SortDirectionBody', 'model/SourceAddressBody', 'model/SourceAddressCountryBody', 'model/StartDateBody', 'model/StatusBody', 'model/StatusCodeBody', 'model/TimezoneBody'], factory);
+    define(['ApiClient', 'model/AccountsBody', 'model/DeliveryOptionsBody', 'model/DeliveryReportBody', 'model/DestinationAddressBody', 'model/DestinationAddressCountryBody', 'model/EndDateBody', 'model/MessageFormatBody', 'model/MetadataKeyBody', 'model/MetadataValueBody', 'model/SortDirectionBody', 'model/SourceAddressBody', 'model/SourceAddressCountryBody', 'model/StartDateBody', 'model/StatusBody', 'model/StatusCodeBody', 'model/TimezoneBody'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./AccountsBody'), require('./DeliveryReportBody'), require('./DestinationAddressBody'), require('./DestinationAddressCountryBody'), require('./EndDateBody'), require('./MessageFormatBody'), require('./MetadataKeyBody'), require('./MetadataValueBody'), require('./SortDirectionBody'), require('./SourceAddressBody'), require('./SourceAddressCountryBody'), require('./StartDateBody'), require('./StatusBody'), require('./StatusCodeBody'), require('./TimezoneBody'));
+    module.exports = factory(require('../ApiClient'), require('./AccountsBody'), require('./DeliveryOptionsBody'), require('./DeliveryReportBody'), require('./DestinationAddressBody'), require('./DestinationAddressCountryBody'), require('./EndDateBody'), require('./MessageFormatBody'), require('./MetadataKeyBody'), require('./MetadataValueBody'), require('./SortDirectionBody'), require('./SourceAddressBody'), require('./SourceAddressCountryBody'), require('./StartDateBody'), require('./StatusBody'), require('./StatusCodeBody'), require('./TimezoneBody'));
   } else {
     // Browser globals (root is window)
     if (!root.MessagemediaRestApi) {
       root.MessagemediaRestApi = {};
     }
-    root.MessagemediaRestApi.AsyncSentMessagesDetailRequest = factory(root.MessagemediaRestApi.ApiClient, root.MessagemediaRestApi.AccountsBody, root.MessagemediaRestApi.DeliveryReportBody, root.MessagemediaRestApi.DestinationAddressBody, root.MessagemediaRestApi.DestinationAddressCountryBody, root.MessagemediaRestApi.EndDateBody, root.MessagemediaRestApi.MessageFormatBody, root.MessagemediaRestApi.MetadataKeyBody, root.MessagemediaRestApi.MetadataValueBody, root.MessagemediaRestApi.SortDirectionBody, root.MessagemediaRestApi.SourceAddressBody, root.MessagemediaRestApi.SourceAddressCountryBody, root.MessagemediaRestApi.StartDateBody, root.MessagemediaRestApi.StatusBody, root.MessagemediaRestApi.StatusCodeBody, root.MessagemediaRestApi.TimezoneBody);
+    root.MessagemediaRestApi.AsyncSentMessagesDetailRequest = factory(root.MessagemediaRestApi.ApiClient, root.MessagemediaRestApi.AccountsBody, root.MessagemediaRestApi.DeliveryOptionsBody, root.MessagemediaRestApi.DeliveryReportBody, root.MessagemediaRestApi.DestinationAddressBody, root.MessagemediaRestApi.DestinationAddressCountryBody, root.MessagemediaRestApi.EndDateBody, root.MessagemediaRestApi.MessageFormatBody, root.MessagemediaRestApi.MetadataKeyBody, root.MessagemediaRestApi.MetadataValueBody, root.MessagemediaRestApi.SortDirectionBody, root.MessagemediaRestApi.SourceAddressBody, root.MessagemediaRestApi.SourceAddressCountryBody, root.MessagemediaRestApi.StartDateBody, root.MessagemediaRestApi.StatusBody, root.MessagemediaRestApi.StatusCodeBody, root.MessagemediaRestApi.TimezoneBody);
   }
-}(this, function(ApiClient, AccountsBody, DeliveryReportBody, DestinationAddressBody, DestinationAddressCountryBody, EndDateBody, MessageFormatBody, MetadataKeyBody, MetadataValueBody, SortDirectionBody, SourceAddressBody, SourceAddressCountryBody, StartDateBody, StatusBody, StatusCodeBody, TimezoneBody) {
+}(this, function(ApiClient, AccountsBody, DeliveryOptionsBody, DeliveryReportBody, DestinationAddressBody, DestinationAddressCountryBody, EndDateBody, MessageFormatBody, MetadataKeyBody, MetadataValueBody, SortDirectionBody, SourceAddressBody, SourceAddressCountryBody, StartDateBody, StatusBody, StatusCodeBody, TimezoneBody) {
   'use strict';
 
 
@@ -53,6 +53,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -131,6 +132,9 @@
       if (data.hasOwnProperty('delivery_report')) {
         obj['delivery_report'] = DeliveryReportBody.constructFromObject(data['delivery_report']);
       }
+      if (data.hasOwnProperty('delivery_options')) {
+        obj['delivery_options'] = DeliveryOptionsBody.constructFromObject(data['delivery_options']);
+      }
     }
     return obj;
   }
@@ -200,6 +204,10 @@
    * @member {module:model/DeliveryReportBody} delivery_report
    */
   exports.prototype['delivery_report'] = undefined;
+  /**
+   * @member {module:model/DeliveryOptionsBody} delivery_options
+   */
+  exports.prototype['delivery_options'] = undefined;
 
 
   /**

@@ -5,7 +5,7 @@ Australia's Leading Messaging Solutions for Business and Enterprise.
 
 - API version: 1.0.0
 - Package version: 1.0.0
-- Build date: 2017-02-27T23:50:18.060Z
+- Build date: 2017-03-02T02:40:45.335Z
 For more information, please visit [https://www.messagemedia.com/contact-us](https://www.messagemedia.com/contact-us)
 
 ## Installation
@@ -115,6 +115,8 @@ Class | Method | HTTP request | Description
  - [MessagemediaRestApi.AsyncReport](docs/AsyncReport.md)
  - [MessagemediaRestApi.AsyncReportResponse](docs/AsyncReportResponse.md)
  - [MessagemediaRestApi.AsyncSentMessagesDetailRequest](docs/AsyncSentMessagesDetailRequest.md)
+ - [MessagemediaRestApi.DeliveryOptionsBody](docs/DeliveryOptionsBody.md)
+ - [MessagemediaRestApi.DeliveryOptionsBodyInner](docs/DeliveryOptionsBodyInner.md)
  - [MessagemediaRestApi.DeliveryReport](docs/DeliveryReport.md)
  - [MessagemediaRestApi.DeliveryReportBody](docs/DeliveryReportBody.md)
  - [MessagemediaRestApi.DeliveryReportId](docs/DeliveryReportId.md)

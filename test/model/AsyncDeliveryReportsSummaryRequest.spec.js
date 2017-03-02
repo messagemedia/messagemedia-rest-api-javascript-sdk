@@ -159,6 +159,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property deliveryOptions (base name: "delivery_options")', function() {
+      // uncomment below and update the code to test the property deliveryOptions
+      //var instane = new MessagemediaRestApi.AsyncDeliveryReportsSummaryRequest();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

@@ -19,6 +19,7 @@ Name | Type | Description | Notes
 **status** | [**StatusBody**](StatusBody.md) |  | [optional] 
 **statusCode** | [**StatusCodeBody**](StatusCodeBody.md) |  | [optional] 
 **deliveryReport** | [**DeliveryReportBody**](DeliveryReportBody.md) |  | [optional] 
+**deliveryOptions** | [**DeliveryOptionsBody**](DeliveryOptionsBody.md) |  | [optional] 
 
 
 <a name="SortByEnum"></a>

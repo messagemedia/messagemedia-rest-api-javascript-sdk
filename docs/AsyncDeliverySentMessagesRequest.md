@@ -19,6 +19,7 @@ Name | Type | Description | Notes
 **sourceAddress** | [**SourceAddressBody**](SourceAddressBody.md) |  | [optional] 
 **deliveryReport** | [**DeliveryReportBody**](DeliveryReportBody.md) |  | [optional] 
 **statusCode** | [**StatusCodeBody**](StatusCodeBody.md) |  | [optional] 
+**deliveryOptions** | [**DeliveryOptionsBody**](DeliveryOptionsBody.md) |  | [optional] 
 
 
 <a name="GroupByEnum"></a>
