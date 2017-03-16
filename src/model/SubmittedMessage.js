@@ -205,7 +205,12 @@ exports.prototype['source_number_type'] = undefined;
      * value: "scheduled"
      * @const
      */
-    "scheduled": "scheduled"  };
+    "scheduled": "scheduled",
+    /**
+     * value: "failed"
+     * @const
+     */
+    "failed": "failed"  };
 
 
   return exports;

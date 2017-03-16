@@ -29,6 +29,8 @@ Name | Type | Description | Notes
 
 * `scheduled` (value: `"scheduled"`)
 
+* `failed` (value: `"failed"`)
+
 
 
 
