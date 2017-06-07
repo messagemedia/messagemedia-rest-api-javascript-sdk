@@ -212,7 +212,8 @@
      * @param {String} opts.metadataKey Filter results for messages that include a metadata key.
      * @param {String} opts.metadataValue Filter results for messages that include a metadata key containing this value. If this parameter is provided, the metadata_key parameter must also be provided.
      * @param {String} opts.statusCode Filter results by message status code.
-     * @param {module:model/String} opts.status Filter results by message status.
+     * @param {module:model/String} opts.status Filter results by message status. Can&#39;t be combined with statuses.
+     * @param {Array.<module:model/String>} opts.statuses Filter results by message status. Can&#39;t be combined with status.
      * @param {Integer} opts.page Page number for paging through paginated result sets.
      * @param {Integer} opts.pageSize Number of results to return in a page for paginated result sets.
      * @param {module:model/String} opts.sortBy Field to sort results set by
@@ -250,6 +251,7 @@
         'metadata_value': opts['metadataValue'],
         'status_code': opts['statusCode'],
         'status': opts['status'],
+        'statuses': this.apiClient.buildCollectionParam(opts['statuses'], 'multi'),
         'page': opts['page'],
         'page_size': opts['pageSize'],
         'sort_by': opts['sortBy'],
@@ -288,7 +290,7 @@
      * Returns a summarised report of delivery reports
      * Returns a summarised report of all delivery reports received during the specified time, grouped by by the specified grouping parameter
      * @param {String} endDate End date time for report window. By default, the timezone for this parameter will be taken from the account settings for the account associated with the credentials used to make the request, or the account included in the Account parameter. This can be overridden using the timezone parameter per request. The date must be in the format of \&quot;yyyy-MM-dd&#39;T&#39;HH:mm:ss\&quot;, e.g. \&quot;2017-02-10T13:30:00\&quot;.
-     * @param {module:model/String} groupBy Field to group results set by
+     * @param {Array.<module:model/String>} groupBy List of fields to group results set by
      * @param {String} startDate Start date time for report window. By default, the timezone for this parameter will be taken from the account settings for the account associated with the credentials used to make the request, or the account included in the Account parameter. This can be overridden using the timezone parameter per request. The date must be in the format of \&quot;yyyy-MM-dd&#39;T&#39;HH:mm:ss\&quot;, e.g. \&quot;2017-02-10T13:30:00\&quot;.
      * @param {Object} opts Optional parameters
      * @param {String} opts.accounts Filter results by a specific account. By default results will be returned for the account associated with the authentication credentials and all sub accounts.
@@ -298,7 +300,8 @@
      * @param {String} opts.metadataKey Filter results for messages that include a metadata key.
      * @param {String} opts.metadataValue Filter results for messages that include a metadata key containing this value. If this parameter is provided, the metadata_key parameter must also be provided.
      * @param {String} opts.statusCode Filter results by message status code.
-     * @param {module:model/String} opts.status Filter results by message status.
+     * @param {module:model/String} opts.status Filter results by message status. Can&#39;t be combined with statuses.
+     * @param {Array.<module:model/String>} opts.statuses Filter results by message status. Can&#39;t be combined with status.
      * @param {module:model/String} opts.summaryBy Function to apply when summarising results
      * @param {module:model/String} opts.summaryField Field to summarise results by
      * @param {String} opts.sourceAddressCountry Filter results by source address country.
@@ -339,9 +342,10 @@
         'metadata_value': opts['metadataValue'],
         'status_code': opts['statusCode'],
         'status': opts['status'],
+        'statuses': this.apiClient.buildCollectionParam(opts['statuses'], 'multi'),
         'summary_by': opts['summaryBy'],
         'summary_field': opts['summaryField'],
-        'group_by': groupBy,
+        'group_by': this.apiClient.buildCollectionParam(groupBy, 'multi'),
         'source_address_country': opts['sourceAddressCountry'],
         'source_address': opts['sourceAddress'],
         'start_date': startDate,
@@ -525,7 +529,7 @@
      * Returns a summarised report of messages received
      * Returns a summarised report of all messages received during the specified time, grouped by by the specified grouping parameter
      * @param {String} endDate End date time for report window. By default, the timezone for this parameter will be taken from the account settings for the account associated with the credentials used to make the request, or the account included in the Account parameter. This can be overridden using the timezone parameter per request. The date must be in the format of \&quot;yyyy-MM-dd&#39;T&#39;HH:mm:ss\&quot;, e.g. \&quot;2017-02-10T13:30:00\&quot;.
-     * @param {module:model/String} groupBy Field to group results set by
+     * @param {Array.<module:model/String>} groupBy List of fields to group results set by
      * @param {String} startDate Start date time for report window. By default, the timezone for this parameter will be taken from the account settings for the account associated with the credentials used to make the request, or the account included in the Account parameter. This can be overridden using the timezone parameter per request. The date must be in the format of \&quot;yyyy-MM-dd&#39;T&#39;HH:mm:ss\&quot;, e.g. \&quot;2017-02-10T13:30:00\&quot;.
      * @param {Object} opts Optional parameters
      * @param {String} opts.accounts Filter results by a specific account. By default results will be returned for the account associated with the authentication credentials and all sub accounts.
@@ -574,7 +578,7 @@
         'metadata_value': opts['metadataValue'],
         'summary_by': opts['summaryBy'],
         'summary_field': opts['summaryField'],
-        'group_by': groupBy,
+        'group_by': this.apiClient.buildCollectionParam(groupBy, 'multi'),
         'source_address_country': opts['sourceAddressCountry'],
         'source_address': opts['sourceAddress'],
         'start_date': startDate,
@@ -619,7 +623,8 @@
      * @param {String} opts.metadataKey Filter results for messages that include a metadata key.
      * @param {String} opts.metadataValue Filter results for messages that include a metadata key containing this value. If this parameter is provided, the metadata_key parameter must also be provided.
      * @param {String} opts.statusCode Filter results by message status code.
-     * @param {module:model/String} opts.status Filter results by message status.
+     * @param {module:model/String} opts.status Filter results by message status. Can&#39;t be combined with statuses.
+     * @param {Array.<module:model/String>} opts.statuses Filter results by message status. Can&#39;t be combined with status.
      * @param {Integer} opts.page Page number for paging through paginated result sets.
      * @param {Integer} opts.pageSize Number of results to return in a page for paginated result sets.
      * @param {module:model/String} opts.sortBy Field to sort results set by
@@ -658,6 +663,7 @@
         'metadata_value': opts['metadataValue'],
         'status_code': opts['statusCode'],
         'status': opts['status'],
+        'statuses': this.apiClient.buildCollectionParam(opts['statuses'], 'multi'),
         'page': opts['page'],
         'page_size': opts['pageSize'],
         'sort_by': opts['sortBy'],
@@ -696,7 +702,7 @@
      * Returns a summarised report of messages sent
      * Returns a summarised report of all messages sent during the specified time, grouped by by the specified grouping parameter
      * @param {String} endDate End date time for report window. By default, the timezone for this parameter will be taken from the account settings for the account associated with the credentials used to make the request, or the account included in the Account parameter. This can be overridden using the timezone parameter per request. The date must be in the format of \&quot;yyyy-MM-dd&#39;T&#39;HH:mm:ss\&quot;, e.g. \&quot;2017-02-10T13:30:00\&quot;.
-     * @param {module:model/String} groupBy Field to group results set by
+     * @param {Array.<module:model/String>} groupBy List of fields to group results set by
      * @param {String} startDate Start date time for report window. By default, the timezone for this parameter will be taken from the account settings for the account associated with the credentials used to make the request, or the account included in the Account parameter. This can be overridden using the timezone parameter per request. The date must be in the format of \&quot;yyyy-MM-dd&#39;T&#39;HH:mm:ss\&quot;, e.g. \&quot;2017-02-10T13:30:00\&quot;.
      * @param {Object} opts Optional parameters
      * @param {String} opts.accounts Filter results by a specific account. By default results will be returned for the account associated with the authentication credentials and all sub accounts.
@@ -745,7 +751,7 @@
         'end_date': endDate,
         'summary_by': opts['summaryBy'],
         'summary_field': opts['summaryField'],
-        'group_by': groupBy,
+        'group_by': this.apiClient.buildCollectionParam(groupBy, 'multi'),
         'message_format': opts['messageFormat'],
         'metadata_key': opts['metadataKey'],
         'metadata_value': opts['metadataValue'],

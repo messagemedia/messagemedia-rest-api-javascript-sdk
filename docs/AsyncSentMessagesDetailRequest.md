@@ -17,6 +17,7 @@ Name | Type | Description | Notes
 **sourceAddressCountry** | [**SourceAddressCountryBody**](SourceAddressCountryBody.md) |  | [optional] 
 **sourceAddress** | [**SourceAddressBody**](SourceAddressBody.md) |  | [optional] 
 **status** | [**StatusBody**](StatusBody.md) |  | [optional] 
+**statuses** | [**StatusesBody**](StatusesBody.md) |  | [optional] 
 **statusCode** | [**StatusCodeBody**](StatusCodeBody.md) |  | [optional] 
 **deliveryReport** | [**DeliveryReportBody**](DeliveryReportBody.md) |  | [optional] 
 **deliveryOptions** | [**DeliveryOptionsBody**](DeliveryOptionsBody.md) |  | [optional] 

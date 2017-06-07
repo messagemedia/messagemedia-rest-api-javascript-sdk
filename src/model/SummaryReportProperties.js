@@ -215,7 +215,12 @@
      * value: "YEAR"
      * @const
      */
-    "YEAR": "YEAR"  };
+    "YEAR": "YEAR",
+    /**
+     * value: "ACCOUNT"
+     * @const
+     */
+    "ACCOUNT": "ACCOUNT"  };
 
   /**
    * Allowed values for the <code>summary</code> property.

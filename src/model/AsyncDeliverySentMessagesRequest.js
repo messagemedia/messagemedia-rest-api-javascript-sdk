@@ -91,7 +91,7 @@
         obj['summary_field'] = SummaryFieldBody.constructFromObject(data['summary_field']);
       }
       if (data.hasOwnProperty('group_by')) {
-        obj['group_by'] = ApiClient.convertToType(data['group_by'], 'String');
+        obj['group_by'] = ApiClient.convertToType(data['group_by'], ['String']);
       }
       if (data.hasOwnProperty('start_date')) {
         obj['start_date'] = StartDateBody.constructFromObject(data['start_date']);
@@ -148,8 +148,8 @@
    */
   exports.prototype['summary_field'] = undefined;
   /**
-   * Field to group results set by
-   * @member {module:model/AsyncDeliverySentMessagesRequest.GroupByEnum} group_by
+   * List of fields to group results set by
+   * @member {Array.<module:model/AsyncDeliverySentMessagesRequest.GroupByEnum>} group_by
    */
   exports.prototype['group_by'] = undefined;
   /**
@@ -211,7 +211,7 @@
 
 
   /**
-   * Allowed values for the <code>group_by</code> property.
+   * Allowed values for the <code>groupBy</code> property.
    * @enum {String}
    * @readonly
    */
@@ -290,7 +290,12 @@
      * value: "YEAR"
      * @const
      */
-    "YEAR": "YEAR"  };
+    "YEAR": "YEAR",
+    /**
+     * value: "ACCOUNT"
+     * @const
+     */
+    "ACCOUNT": "ACCOUNT"  };
 
 
   return exports;

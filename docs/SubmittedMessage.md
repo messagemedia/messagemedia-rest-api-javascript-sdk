@@ -25,6 +25,8 @@ Name | Type | Description | Notes
 
 * `queued` (value: `"queued"`)
 
+* `processed` (value: `"processed"`)
+
 * `cancelled` (value: `"cancelled"`)
 
 * `scheduled` (value: `"scheduled"`)

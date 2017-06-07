@@ -37,7 +37,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new MessagemediaRestApi.MessageStatusCode();
+    instance = new MessagemediaRestApi.StatusesBody();
   });
 
   var getProperty = function(object, getter, property) {
@@ -56,11 +56,11 @@
       object[property] = value;
   }
 
-  describe('MessageStatusCode', function() {
-    it('should create an instance of MessageStatusCode', function() {
-      // uncomment below and update the code to test MessageStatusCode
-      //var instane = new MessagemediaRestApi.MessageStatusCode();
-      //expect(instance).to.be.a(MessagemediaRestApi.MessageStatusCode);
+  describe('StatusesBody', function() {
+    it('should create an instance of StatusesBody', function() {
+      // uncomment below and update the code to test StatusesBody
+      //var instane = new MessagemediaRestApi.StatusesBody();
+      //expect(instance).to.be.a(MessagemediaRestApi.StatusesBody);
     });
 
   });

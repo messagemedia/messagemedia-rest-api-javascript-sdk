@@ -23,18 +23,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/MessageStatusCode'], factory);
+    define(['ApiClient'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./MessageStatusCode'));
+    module.exports = factory(require('../ApiClient'));
   } else {
     // Browser globals (root is window)
     if (!root.MessagemediaRestApi) {
       root.MessagemediaRestApi = {};
     }
-    root.MessagemediaRestApi.DeliveryReport = factory(root.MessagemediaRestApi.ApiClient, root.MessagemediaRestApi.MessageStatusCode);
+    root.MessagemediaRestApi.DeliveryReport = factory(root.MessagemediaRestApi.ApiClient);
   }
-}(this, function(ApiClient, MessageStatusCode) {
+}(this, function(ApiClient) {
   'use strict';
 
 
@@ -111,7 +111,7 @@
         obj['status'] = ApiClient.convertToType(data['status'], 'String');
       }
       if (data.hasOwnProperty('status_code')) {
-        obj['status_code'] = MessageStatusCode.constructFromObject(data['status_code']);
+        obj['status_code'] = ApiClient.convertToType(data['status_code'], 'String');
       }
       if (data.hasOwnProperty('timestamp')) {
         obj['timestamp'] = ApiClient.convertToType(data['timestamp'], 'Date');
@@ -171,7 +171,8 @@
    */
   exports.prototype['status'] = undefined;
   /**
-   * @member {module:model/MessageStatusCode} status_code
+   * Status code of the message
+   * @member {String} status_code
    */
   exports.prototype['status_code'] = undefined;
   /**

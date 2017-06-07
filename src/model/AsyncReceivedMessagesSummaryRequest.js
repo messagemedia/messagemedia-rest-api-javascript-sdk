@@ -23,18 +23,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/AccountsBody', 'model/DeliveryOptionsBody', 'model/DestinationAddressBody', 'model/DestinationAddressCountryBody', 'model/EndDateBody', 'model/MessageFormatBody', 'model/MetadataKeyBody', 'model/MetadataValueBody', 'model/SourceAddressBody', 'model/SourceAddressCountryBody', 'model/StartDateBody', 'model/StatusBody', 'model/StatusCodeBody', 'model/SummaryByBody', 'model/SummaryFieldBody', 'model/TimezoneBody'], factory);
+    define(['ApiClient', 'model/AccountsBody', 'model/DeliveryOptionsBody', 'model/DestinationAddressBody', 'model/DestinationAddressCountryBody', 'model/EndDateBody', 'model/MessageFormatBody', 'model/MetadataKeyBody', 'model/MetadataValueBody', 'model/SourceAddressBody', 'model/SourceAddressCountryBody', 'model/StartDateBody', 'model/StatusBody', 'model/StatusCodeBody', 'model/StatusesBody', 'model/SummaryByBody', 'model/SummaryFieldBody', 'model/TimezoneBody'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./AccountsBody'), require('./DeliveryOptionsBody'), require('./DestinationAddressBody'), require('./DestinationAddressCountryBody'), require('./EndDateBody'), require('./MessageFormatBody'), require('./MetadataKeyBody'), require('./MetadataValueBody'), require('./SourceAddressBody'), require('./SourceAddressCountryBody'), require('./StartDateBody'), require('./StatusBody'), require('./StatusCodeBody'), require('./SummaryByBody'), require('./SummaryFieldBody'), require('./TimezoneBody'));
+    module.exports = factory(require('../ApiClient'), require('./AccountsBody'), require('./DeliveryOptionsBody'), require('./DestinationAddressBody'), require('./DestinationAddressCountryBody'), require('./EndDateBody'), require('./MessageFormatBody'), require('./MetadataKeyBody'), require('./MetadataValueBody'), require('./SourceAddressBody'), require('./SourceAddressCountryBody'), require('./StartDateBody'), require('./StatusBody'), require('./StatusCodeBody'), require('./StatusesBody'), require('./SummaryByBody'), require('./SummaryFieldBody'), require('./TimezoneBody'));
   } else {
     // Browser globals (root is window)
     if (!root.MessagemediaRestApi) {
       root.MessagemediaRestApi = {};
     }
-    root.MessagemediaRestApi.AsyncReceivedMessagesSummaryRequest = factory(root.MessagemediaRestApi.ApiClient, root.MessagemediaRestApi.AccountsBody, root.MessagemediaRestApi.DeliveryOptionsBody, root.MessagemediaRestApi.DestinationAddressBody, root.MessagemediaRestApi.DestinationAddressCountryBody, root.MessagemediaRestApi.EndDateBody, root.MessagemediaRestApi.MessageFormatBody, root.MessagemediaRestApi.MetadataKeyBody, root.MessagemediaRestApi.MetadataValueBody, root.MessagemediaRestApi.SourceAddressBody, root.MessagemediaRestApi.SourceAddressCountryBody, root.MessagemediaRestApi.StartDateBody, root.MessagemediaRestApi.StatusBody, root.MessagemediaRestApi.StatusCodeBody, root.MessagemediaRestApi.SummaryByBody, root.MessagemediaRestApi.SummaryFieldBody, root.MessagemediaRestApi.TimezoneBody);
+    root.MessagemediaRestApi.AsyncReceivedMessagesSummaryRequest = factory(root.MessagemediaRestApi.ApiClient, root.MessagemediaRestApi.AccountsBody, root.MessagemediaRestApi.DeliveryOptionsBody, root.MessagemediaRestApi.DestinationAddressBody, root.MessagemediaRestApi.DestinationAddressCountryBody, root.MessagemediaRestApi.EndDateBody, root.MessagemediaRestApi.MessageFormatBody, root.MessagemediaRestApi.MetadataKeyBody, root.MessagemediaRestApi.MetadataValueBody, root.MessagemediaRestApi.SourceAddressBody, root.MessagemediaRestApi.SourceAddressCountryBody, root.MessagemediaRestApi.StartDateBody, root.MessagemediaRestApi.StatusBody, root.MessagemediaRestApi.StatusCodeBody, root.MessagemediaRestApi.StatusesBody, root.MessagemediaRestApi.SummaryByBody, root.MessagemediaRestApi.SummaryFieldBody, root.MessagemediaRestApi.TimezoneBody);
   }
-}(this, function(ApiClient, AccountsBody, DeliveryOptionsBody, DestinationAddressBody, DestinationAddressCountryBody, EndDateBody, MessageFormatBody, MetadataKeyBody, MetadataValueBody, SourceAddressBody, SourceAddressCountryBody, StartDateBody, StatusBody, StatusCodeBody, SummaryByBody, SummaryFieldBody, TimezoneBody) {
+}(this, function(ApiClient, AccountsBody, DeliveryOptionsBody, DestinationAddressBody, DestinationAddressCountryBody, EndDateBody, MessageFormatBody, MetadataKeyBody, MetadataValueBody, SourceAddressBody, SourceAddressCountryBody, StartDateBody, StatusBody, StatusCodeBody, StatusesBody, SummaryByBody, SummaryFieldBody, TimezoneBody) {
   'use strict';
 
 
@@ -53,6 +53,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -91,7 +92,7 @@
         obj['summary_field'] = SummaryFieldBody.constructFromObject(data['summary_field']);
       }
       if (data.hasOwnProperty('group_by')) {
-        obj['group_by'] = ApiClient.convertToType(data['group_by'], 'String');
+        obj['group_by'] = ApiClient.convertToType(data['group_by'], ['String']);
       }
       if (data.hasOwnProperty('start_date')) {
         obj['start_date'] = StartDateBody.constructFromObject(data['start_date']);
@@ -129,6 +130,9 @@
       if (data.hasOwnProperty('status')) {
         obj['status'] = StatusBody.constructFromObject(data['status']);
       }
+      if (data.hasOwnProperty('statuses')) {
+        obj['statuses'] = StatusesBody.constructFromObject(data['statuses']);
+      }
       if (data.hasOwnProperty('status_code')) {
         obj['status_code'] = StatusCodeBody.constructFromObject(data['status_code']);
       }
@@ -148,8 +152,8 @@
    */
   exports.prototype['summary_field'] = undefined;
   /**
-   * Field to group results set by
-   * @member {module:model/AsyncReceivedMessagesSummaryRequest.GroupByEnum} group_by
+   * List of fields to group results set by
+   * @member {Array.<module:model/AsyncReceivedMessagesSummaryRequest.GroupByEnum>} group_by
    */
   exports.prototype['group_by'] = undefined;
   /**
@@ -201,6 +205,10 @@
    */
   exports.prototype['status'] = undefined;
   /**
+   * @member {module:model/StatusesBody} statuses
+   */
+  exports.prototype['statuses'] = undefined;
+  /**
    * @member {module:model/StatusCodeBody} status_code
    */
   exports.prototype['status_code'] = undefined;
@@ -211,7 +219,7 @@
 
 
   /**
-   * Allowed values for the <code>group_by</code> property.
+   * Allowed values for the <code>groupBy</code> property.
    * @enum {String}
    * @readonly
    */
@@ -285,7 +293,12 @@
      * value: "YEAR"
      * @const
      */
-    "YEAR": "YEAR"  };
+    "YEAR": "YEAR",
+    /**
+     * value: "ACCOUNT"
+     * @const
+     */
+    "ACCOUNT": "ACCOUNT"  };
 
 
   return exports;

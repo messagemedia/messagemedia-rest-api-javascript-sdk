@@ -5,7 +5,7 @@ Australia's Leading Messaging Solutions for Business and Enterprise.
 
 - API version: 1.0.0
 - Package version: 1.0.0
-- Build date: 2017-03-16T05:50:13.573Z
+- Build date: 2017-06-07T05:13:47.762Z
 For more information, please visit [https://www.messagemedia.com/contact-us](https://www.messagemedia.com/contact-us)
 
 ## Installation
@@ -127,7 +127,6 @@ Class | Method | HTTP request | Description
  - [MessagemediaRestApi.InlineResponse200](docs/InlineResponse200.md)
  - [MessagemediaRestApi.InlineResponse400](docs/InlineResponse400.md)
  - [MessagemediaRestApi.MessageFormatBody](docs/MessageFormatBody.md)
- - [MessagemediaRestApi.MessageStatusCode](docs/MessageStatusCode.md)
  - [MessagemediaRestApi.Messages](docs/Messages.md)
  - [MessagemediaRestApi.MetadataKeyBody](docs/MetadataKeyBody.md)
  - [MessagemediaRestApi.MetadataKeysResponse](docs/MetadataKeysResponse.md)
@@ -155,12 +154,13 @@ Class | Method | HTTP request | Description
  - [MessagemediaRestApi.Status](docs/Status.md)
  - [MessagemediaRestApi.StatusBody](docs/StatusBody.md)
  - [MessagemediaRestApi.StatusCodeBody](docs/StatusCodeBody.md)
+ - [MessagemediaRestApi.StatusesBody](docs/StatusesBody.md)
  - [MessagemediaRestApi.SubmittedMessage](docs/SubmittedMessage.md)
  - [MessagemediaRestApi.SubmittedMessages](docs/SubmittedMessages.md)
  - [MessagemediaRestApi.SummaryByBody](docs/SummaryByBody.md)
  - [MessagemediaRestApi.SummaryFieldBody](docs/SummaryFieldBody.md)
  - [MessagemediaRestApi.SummaryReport](docs/SummaryReport.md)
- - [MessagemediaRestApi.SummaryReportData](docs/SummaryReportData.md)
+ - [MessagemediaRestApi.SummaryReportItem](docs/SummaryReportItem.md)
  - [MessagemediaRestApi.SummaryReportProperties](docs/SummaryReportProperties.md)
  - [MessagemediaRestApi.TimezoneBody](docs/TimezoneBody.md)
 

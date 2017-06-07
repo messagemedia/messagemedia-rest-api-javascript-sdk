@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **sourceAddress** | **String** | Address this delivery report was received from, the destination address of the sent message that this delivery report is in response to | [optional] 
 **sourceAddressCountry** | **String** | Country associated with the source address | [optional] 
 **status** | **String** | Status of the message | [optional] 
-**statusCode** | [**MessageStatusCode**](MessageStatusCode.md) |  | [optional] 
+**statusCode** | **String** | Status code of the message | [optional] 
 **timestamp** | **Date** | Date time at which this delivery report was received | [optional] 
 
 

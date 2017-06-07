@@ -213,7 +213,8 @@ var opts = {
   'metadataKey': "metadataKey_example", // String | Filter results for messages that include a metadata key.
   'metadataValue': "metadataValue_example", // String | Filter results for messages that include a metadata key containing this value. If this parameter is provided, the metadata_key parameter must also be provided.
   'statusCode': "statusCode_example", // String | Filter results by message status code.
-  'status': "status_example", // String | Filter results by message status.
+  'status': "status_example", // String | Filter results by message status. Can't be combined with statuses.
+  'statuses': ["statuses_example"], // [String] | Filter results by message status. Can't be combined with status.
   'page': 56, // Integer | Page number for paging through paginated result sets.
   'pageSize': 56, // Integer | Number of results to return in a page for paginated result sets.
   'sortBy': "sortBy_example", // String | Field to sort results set by
@@ -246,7 +247,8 @@ Name | Type | Description  | Notes
  **metadataKey** | **String**| Filter results for messages that include a metadata key. | [optional] 
  **metadataValue** | **String**| Filter results for messages that include a metadata key containing this value. If this parameter is provided, the metadata_key parameter must also be provided. | [optional] 
  **statusCode** | **String**| Filter results by message status code. | [optional] 
- **status** | **String**| Filter results by message status. | [optional] 
+ **status** | **String**| Filter results by message status. Can&#39;t be combined with statuses. | [optional] 
+ **statuses** | [**[String]**](String.md)| Filter results by message status. Can&#39;t be combined with status. | [optional] 
  **page** | **Integer**| Page number for paging through paginated result sets. | [optional] 
  **pageSize** | **Integer**| Number of results to return in a page for paginated result sets. | [optional] 
  **sortBy** | **String**| Field to sort results set by | [optional] 
@@ -290,7 +292,7 @@ var apiInstance = new MessagemediaRestApi.MessagingReportsApi();
 
 var endDate = "endDate_example"; // String | End date time for report window. By default, the timezone for this parameter will be taken from the account settings for the account associated with the credentials used to make the request, or the account included in the Account parameter. This can be overridden using the timezone parameter per request. The date must be in the format of \"yyyy-MM-dd'T'HH:mm:ss\", e.g. \"2017-02-10T13:30:00\".
 
-var groupBy = "groupBy_example"; // String | Field to group results set by
+var groupBy = ["groupBy_example"]; // [String] | List of fields to group results set by
 
 var startDate = "startDate_example"; // String | Start date time for report window. By default, the timezone for this parameter will be taken from the account settings for the account associated with the credentials used to make the request, or the account included in the Account parameter. This can be overridden using the timezone parameter per request. The date must be in the format of \"yyyy-MM-dd'T'HH:mm:ss\", e.g. \"2017-02-10T13:30:00\".
 
@@ -302,7 +304,8 @@ var opts = {
   'metadataKey': "metadataKey_example", // String | Filter results for messages that include a metadata key.
   'metadataValue': "metadataValue_example", // String | Filter results for messages that include a metadata key containing this value. If this parameter is provided, the metadata_key parameter must also be provided.
   'statusCode': "statusCode_example", // String | Filter results by message status code.
-  'status': "status_example", // String | Filter results by message status.
+  'status': "status_example", // String | Filter results by message status. Can't be combined with statuses.
+  'statuses': ["statuses_example"], // [String] | Filter results by message status. Can't be combined with status.
   'summaryBy': "summaryBy_example", // String | Function to apply when summarising results
   'summaryField': "summaryField_example", // String | Field to summarise results by
   'sourceAddressCountry': "sourceAddressCountry_example", // String | Filter results by source address country.
@@ -325,7 +328,7 @@ apiInstance.getDeliveryReportsSummary(endDategroupBy, startDate, , opts, callbac
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **endDate** | **String**| End date time for report window. By default, the timezone for this parameter will be taken from the account settings for the account associated with the credentials used to make the request, or the account included in the Account parameter. This can be overridden using the timezone parameter per request. The date must be in the format of \&quot;yyyy-MM-dd&#39;T&#39;HH:mm:ss\&quot;, e.g. \&quot;2017-02-10T13:30:00\&quot;. | 
- **groupBy** | **String**| Field to group results set by | 
+ **groupBy** | [**[String]**](String.md)| List of fields to group results set by | 
  **startDate** | **String**| Start date time for report window. By default, the timezone for this parameter will be taken from the account settings for the account associated with the credentials used to make the request, or the account included in the Account parameter. This can be overridden using the timezone parameter per request. The date must be in the format of \&quot;yyyy-MM-dd&#39;T&#39;HH:mm:ss\&quot;, e.g. \&quot;2017-02-10T13:30:00\&quot;. | 
  **accounts** | **String**| Filter results by a specific account. By default results will be returned for the account associated with the authentication credentials and all sub accounts. | [optional] 
  **destinationAddressCountry** | **String**| Filter results by destination address country. | [optional] 
@@ -334,7 +337,8 @@ Name | Type | Description  | Notes
  **metadataKey** | **String**| Filter results for messages that include a metadata key. | [optional] 
  **metadataValue** | **String**| Filter results for messages that include a metadata key containing this value. If this parameter is provided, the metadata_key parameter must also be provided. | [optional] 
  **statusCode** | **String**| Filter results by message status code. | [optional] 
- **status** | **String**| Filter results by message status. | [optional] 
+ **status** | **String**| Filter results by message status. Can&#39;t be combined with statuses. | [optional] 
+ **statuses** | [**[String]**](String.md)| Filter results by message status. Can&#39;t be combined with status. | [optional] 
  **summaryBy** | **String**| Function to apply when summarising results | [optional] 
  **summaryField** | **String**| Field to summarise results by | [optional] 
  **sourceAddressCountry** | **String**| Filter results by source address country. | [optional] 
@@ -525,7 +529,7 @@ var apiInstance = new MessagemediaRestApi.MessagingReportsApi();
 
 var endDate = "endDate_example"; // String | End date time for report window. By default, the timezone for this parameter will be taken from the account settings for the account associated with the credentials used to make the request, or the account included in the Account parameter. This can be overridden using the timezone parameter per request. The date must be in the format of \"yyyy-MM-dd'T'HH:mm:ss\", e.g. \"2017-02-10T13:30:00\".
 
-var groupBy = "groupBy_example"; // String | Field to group results set by
+var groupBy = ["groupBy_example"]; // [String] | List of fields to group results set by
 
 var startDate = "startDate_example"; // String | Start date time for report window. By default, the timezone for this parameter will be taken from the account settings for the account associated with the credentials used to make the request, or the account included in the Account parameter. This can be overridden using the timezone parameter per request. The date must be in the format of \"yyyy-MM-dd'T'HH:mm:ss\", e.g. \"2017-02-10T13:30:00\".
 
@@ -558,7 +562,7 @@ apiInstance.getReceivedMessagesSummary(endDategroupBy, startDate, , opts, callba
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **endDate** | **String**| End date time for report window. By default, the timezone for this parameter will be taken from the account settings for the account associated with the credentials used to make the request, or the account included in the Account parameter. This can be overridden using the timezone parameter per request. The date must be in the format of \&quot;yyyy-MM-dd&#39;T&#39;HH:mm:ss\&quot;, e.g. \&quot;2017-02-10T13:30:00\&quot;. | 
- **groupBy** | **String**| Field to group results set by | 
+ **groupBy** | [**[String]**](String.md)| List of fields to group results set by | 
  **startDate** | **String**| Start date time for report window. By default, the timezone for this parameter will be taken from the account settings for the account associated with the credentials used to make the request, or the account included in the Account parameter. This can be overridden using the timezone parameter per request. The date must be in the format of \&quot;yyyy-MM-dd&#39;T&#39;HH:mm:ss\&quot;, e.g. \&quot;2017-02-10T13:30:00\&quot;. | 
  **accounts** | **String**| Filter results by a specific account. By default results will be returned for the account associated with the authentication credentials and all sub accounts. | [optional] 
  **destinationAddressCountry** | **String**| Filter results by destination address country. | [optional] 
@@ -618,7 +622,8 @@ var opts = {
   'metadataKey': "metadataKey_example", // String | Filter results for messages that include a metadata key.
   'metadataValue': "metadataValue_example", // String | Filter results for messages that include a metadata key containing this value. If this parameter is provided, the metadata_key parameter must also be provided.
   'statusCode': "statusCode_example", // String | Filter results by message status code.
-  'status': "status_example", // String | Filter results by message status.
+  'status': "status_example", // String | Filter results by message status. Can't be combined with statuses.
+  'statuses': ["statuses_example"], // [String] | Filter results by message status. Can't be combined with status.
   'page': 56, // Integer | Page number for paging through paginated result sets.
   'pageSize': 56, // Integer | Number of results to return in a page for paginated result sets.
   'sortBy': "sortBy_example", // String | Field to sort results set by
@@ -652,7 +657,8 @@ Name | Type | Description  | Notes
  **metadataKey** | **String**| Filter results for messages that include a metadata key. | [optional] 
  **metadataValue** | **String**| Filter results for messages that include a metadata key containing this value. If this parameter is provided, the metadata_key parameter must also be provided. | [optional] 
  **statusCode** | **String**| Filter results by message status code. | [optional] 
- **status** | **String**| Filter results by message status. | [optional] 
+ **status** | **String**| Filter results by message status. Can&#39;t be combined with statuses. | [optional] 
+ **statuses** | [**[String]**](String.md)| Filter results by message status. Can&#39;t be combined with status. | [optional] 
  **page** | **Integer**| Page number for paging through paginated result sets. | [optional] 
  **pageSize** | **Integer**| Number of results to return in a page for paginated result sets. | [optional] 
  **sortBy** | **String**| Field to sort results set by | [optional] 
@@ -696,7 +702,7 @@ var apiInstance = new MessagemediaRestApi.MessagingReportsApi();
 
 var endDate = "endDate_example"; // String | End date time for report window. By default, the timezone for this parameter will be taken from the account settings for the account associated with the credentials used to make the request, or the account included in the Account parameter. This can be overridden using the timezone parameter per request. The date must be in the format of \"yyyy-MM-dd'T'HH:mm:ss\", e.g. \"2017-02-10T13:30:00\".
 
-var groupBy = "groupBy_example"; // String | Field to group results set by
+var groupBy = ["groupBy_example"]; // [String] | List of fields to group results set by
 
 var startDate = "startDate_example"; // String | Start date time for report window. By default, the timezone for this parameter will be taken from the account settings for the account associated with the credentials used to make the request, or the account included in the Account parameter. This can be overridden using the timezone parameter per request. The date must be in the format of \"yyyy-MM-dd'T'HH:mm:ss\", e.g. \"2017-02-10T13:30:00\".
 
@@ -731,7 +737,7 @@ apiInstance.getSentMessagesSummary(endDategroupBy, startDate, , opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **endDate** | **String**| End date time for report window. By default, the timezone for this parameter will be taken from the account settings for the account associated with the credentials used to make the request, or the account included in the Account parameter. This can be overridden using the timezone parameter per request. The date must be in the format of \&quot;yyyy-MM-dd&#39;T&#39;HH:mm:ss\&quot;, e.g. \&quot;2017-02-10T13:30:00\&quot;. | 
- **groupBy** | **String**| Field to group results set by | 
+ **groupBy** | [**[String]**](String.md)| List of fields to group results set by | 
  **startDate** | **String**| Start date time for report window. By default, the timezone for this parameter will be taken from the account settings for the account associated with the credentials used to make the request, or the account included in the Account parameter. This can be overridden using the timezone parameter per request. The date must be in the format of \&quot;yyyy-MM-dd&#39;T&#39;HH:mm:ss\&quot;, e.g. \&quot;2017-02-10T13:30:00\&quot;. | 
  **accounts** | **String**| Filter results by a specific account. By default results will be returned for the account associated with the authentication credentials and all sub accounts. | [optional] 
  **deliveryReport** | **Boolean**| Filter results by delivery report. | [optional] 

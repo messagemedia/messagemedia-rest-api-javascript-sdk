@@ -141,6 +141,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property statuses (base name: "statuses")', function() {
+      // uncomment below and update the code to test the property statuses
+      //var instane = new MessagemediaRestApi.AsyncDeliveryReportDetailRequest();
+      //expect(instance).to.be();
+    });
+
     it('should have the property sourceAddressCountry (base name: "source_address_country")', function() {
       // uncomment below and update the code to test the property sourceAddressCountry
       //var instane = new MessagemediaRestApi.AsyncDeliveryReportDetailRequest();

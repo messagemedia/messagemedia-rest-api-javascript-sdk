@@ -197,6 +197,11 @@ exports.prototype['source_number_type'] = undefined;
      */
     "queued": "queued",
     /**
+     * value: "processed"
+     * @const
+     */
+    "processed": "processed",
+    /**
      * value: "cancelled"
      * @const
      */

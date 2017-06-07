@@ -4,6 +4,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **properties** | [**SummaryReportProperties**](SummaryReportProperties.md) |  | [optional] 
-**data** | [**[SummaryReportData]**](SummaryReportData.md) |  | [optional] 
+**data** | [**[SummaryReportItem]**](SummaryReportItem.md) |  | [optional] 
 
 

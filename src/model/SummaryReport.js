@@ -23,18 +23,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/SummaryReportData', 'model/SummaryReportProperties'], factory);
+    define(['ApiClient', 'model/SummaryReportItem', 'model/SummaryReportProperties'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./SummaryReportData'), require('./SummaryReportProperties'));
+    module.exports = factory(require('../ApiClient'), require('./SummaryReportItem'), require('./SummaryReportProperties'));
   } else {
     // Browser globals (root is window)
     if (!root.MessagemediaRestApi) {
       root.MessagemediaRestApi = {};
     }
-    root.MessagemediaRestApi.SummaryReport = factory(root.MessagemediaRestApi.ApiClient, root.MessagemediaRestApi.SummaryReportData, root.MessagemediaRestApi.SummaryReportProperties);
+    root.MessagemediaRestApi.SummaryReport = factory(root.MessagemediaRestApi.ApiClient, root.MessagemediaRestApi.SummaryReportItem, root.MessagemediaRestApi.SummaryReportProperties);
   }
-}(this, function(ApiClient, SummaryReportData, SummaryReportProperties) {
+}(this, function(ApiClient, SummaryReportItem, SummaryReportProperties) {
   'use strict';
 
 
@@ -73,7 +73,7 @@
         obj['properties'] = SummaryReportProperties.constructFromObject(data['properties']);
       }
       if (data.hasOwnProperty('data')) {
-        obj['data'] = ApiClient.convertToType(data['data'], [SummaryReportData]);
+        obj['data'] = ApiClient.convertToType(data['data'], [SummaryReportItem]);
       }
     }
     return obj;
@@ -84,7 +84,7 @@
    */
   exports.prototype['properties'] = undefined;
   /**
-   * @member {Array.<module:model/SummaryReportData>} data
+   * @member {Array.<module:model/SummaryReportItem>} data
    */
   exports.prototype['data'] = undefined;
 

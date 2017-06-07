@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **summaryBy** | [**SummaryByBody**](SummaryByBody.md) |  | [optional] 
 **summaryField** | [**SummaryFieldBody**](SummaryFieldBody.md) |  | [optional] 
-**groupBy** | **String** | Field to group results set by | [optional] 
+**groupBy** | **[String]** | List of fields to group results set by | [optional] 
 **startDate** | [**StartDateBody**](StartDateBody.md) |  | [optional] 
 **endDate** | [**EndDateBody**](EndDateBody.md) |  | [optional] 
 **timezone** | [**TimezoneBody**](TimezoneBody.md) |  | [optional] 
@@ -18,12 +18,13 @@ Name | Type | Description | Notes
 **sourceAddressCountry** | [**SourceAddressCountryBody**](SourceAddressCountryBody.md) |  | [optional] 
 **sourceAddress** | [**SourceAddressBody**](SourceAddressBody.md) |  | [optional] 
 **status** | [**StatusBody**](StatusBody.md) |  | [optional] 
+**statuses** | [**StatusesBody**](StatusesBody.md) |  | [optional] 
 **statusCode** | [**StatusCodeBody**](StatusCodeBody.md) |  | [optional] 
 **deliveryOptions** | [**DeliveryOptionsBody**](DeliveryOptionsBody.md) |  | [optional] 
 
 
-<a name="GroupByEnum"></a>
-## Enum: GroupByEnum
+<a name="[GroupByEnum]"></a>
+## Enum: [GroupByEnum]
 
 
 * `DAY` (value: `"DAY"`)
@@ -53,6 +54,8 @@ Name | Type | Description | Notes
 * `STATUS_CODE` (value: `"STATUS_CODE"`)
 
 * `YEAR` (value: `"YEAR"`)
+
+* `ACCOUNT` (value: `"ACCOUNT"`)
 
 
 

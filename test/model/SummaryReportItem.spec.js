@@ -37,7 +37,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new MessagemediaRestApi.SummaryReportData();
+    instance = new MessagemediaRestApi.SummaryReportItem();
   });
 
   var getProperty = function(object, getter, property) {
@@ -56,22 +56,28 @@
       object[property] = value;
   }
 
-  describe('SummaryReportData', function() {
-    it('should create an instance of SummaryReportData', function() {
-      // uncomment below and update the code to test SummaryReportData
-      //var instane = new MessagemediaRestApi.SummaryReportData();
-      //expect(instance).to.be.a(MessagemediaRestApi.SummaryReportData);
+  describe('SummaryReportItem', function() {
+    it('should create an instance of SummaryReportItem', function() {
+      // uncomment below and update the code to test SummaryReportItem
+      //var instane = new MessagemediaRestApi.SummaryReportItem();
+      //expect(instance).to.be.a(MessagemediaRestApi.SummaryReportItem);
     });
 
     it('should have the property group (base name: "group")', function() {
       // uncomment below and update the code to test the property group
-      //var instane = new MessagemediaRestApi.SummaryReportData();
+      //var instane = new MessagemediaRestApi.SummaryReportItem();
       //expect(instance).to.be();
     });
 
     it('should have the property value (base name: "value")', function() {
       // uncomment below and update the code to test the property value
-      //var instane = new MessagemediaRestApi.SummaryReportData();
+      //var instane = new MessagemediaRestApi.SummaryReportItem();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property subgroups (base name: "subgroups")', function() {
+      // uncomment below and update the code to test the property subgroups
+      //var instane = new MessagemediaRestApi.SummaryReportItem();
       //expect(instance).to.be();
     });
 
